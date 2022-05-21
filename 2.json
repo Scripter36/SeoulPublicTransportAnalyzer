@@ -1,0 +1,4276 @@
+{
+  "status": "CITY",
+  "context": {
+    "engineVersion": "1.3.0:6a9c6eb1-41b2-496e-a912-bfe68c84b175",
+    "engineUrl": null,
+    "start": "127.0576351,37.6653828,,,,",
+    "goal": "127.0856709,37.5959203,,,,",
+    "departureTime": "2022-05-20T22:51:20",
+    "currentDateTime": "2022-05-20T23:12:36",
+    "serviceDay": { "id": 1, "name": "평일" },
+    "recommendDirectionsType": "CITY",
+    "uuid": null
+  },
+  "paths": [
+    {
+      "idx": 1,
+      "mode": "TIME",
+      "type": "SUBWAY",
+      "optimizationMethod": "RECOMMEND",
+      "labels": ["최적"],
+      "departureTime": "2022-05-20T22:52:03",
+      "arrivalTime": "2022-05-20T23:09:40",
+      "alarmDepartureTime": null,
+      "alarmArrivalTime": null,
+      "duration": 17,
+      "intercityDuration": 0,
+      "walkingDuration": 3,
+      "waitingDuration": 0,
+      "distance": 8369,
+      "shutdown": false,
+      "fare": 1250,
+      "fares": [
+        {
+          "routes": [
+            [
+              {
+                "id": 7,
+                "name": "7호선",
+                "longName": "수도권7호선(장암-석남)",
+                "type": {
+                  "id": 7,
+                  "name": "7호선",
+                  "shortName": null,
+                  "iconName": null,
+                  "color": "#697215"
+                },
+                "realtime": false,
+                "useInterval": false,
+                "operationType": "일반",
+                "operation": {
+                  "type": "NORMAL",
+                  "name": "일반",
+                  "shortName": "일"
+                },
+                "color": null,
+                "platform": null,
+                "headsign": null,
+                "busInterval": null,
+                "flag": null
+              }
+            ]
+          ],
+          "fare": 1250,
+          "tripIdx": 3232
+        }
+      ],
+      "legs": [
+        {
+          "steps": [
+            {
+              "type": "WALKING",
+              "instruction": "마들역 2번 출구까지 도보 169m",
+              "info": {
+                "walk": "도보 169m",
+                "etc": null,
+                "subway": {
+                  "stationId": 712,
+                  "template": "마들역 $번 출구까지",
+                  "exitNo": "2"
+                }
+              },
+              "departureTime": "2022-05-20T22:52:03",
+              "arrivalTime": "2022-05-20T22:55:20",
+              "alarmTime": {
+                "alarmDepartureTime": null,
+                "alarmArrivalTime": null
+              },
+              "distance": 169,
+              "duration": 3,
+              "tripIdx": null,
+              "headsign": null,
+              "wayType": null,
+              "routes": [],
+              "stations": [],
+              "arrivals": [],
+              "points": [
+                { "x": 127.0576351, "y": 37.6653828 },
+                { "x": 127.0576324, "y": 37.6653824 }
+              ],
+              "walkpath": {
+                "legs": [
+                  {
+                    "steps": [
+                      {
+                        "cross": null,
+                        "distance": 0,
+                        "duration": 0,
+                        "eye": [127.0576347, 37.6653817],
+                        "junc": null,
+                        "lat": 37.6653817,
+                        "lng": 127.0576347,
+                        "lookAt": [127.0576103, 37.6654709],
+                        "path": null,
+                        "poi": null,
+                        "road": null,
+                        "turn": 14,
+                        "turnDesc": "출발",
+                        "turnInfo": null,
+                        "upwa": null
+                      },
+                      {
+                        "cross": null,
+                        "distance": 62,
+                        "duration": 97,
+                        "eye": [127.0576347, 37.6653817],
+                        "junc": null,
+                        "lat": 37.6653817,
+                        "lng": 127.0576347,
+                        "lookAt": [127.0576103, 37.6654709],
+                        "path": "127.0576347,37.6653817 127.0575396,37.6657410 127.0577253,37.6657696 127.0577288,37.6657525 127.0577154,37.6657281",
+                        "poi": null,
+                        "road": "동일로",
+                        "turn": 12,
+                        "turnDesc": "마들역 하나로마트상계점앞입출구 ",
+                        "turnInfo": null,
+                        "upwa": {
+                          "from": null,
+                          "to": {
+                            "exit": "하나로마트상계점앞입출구",
+                            "name": "마들역"
+                          }
+                        }
+                      },
+                      {
+                        "cross": null,
+                        "distance": 11,
+                        "duration": 9,
+                        "eye": [127.0575973, 37.6657493],
+                        "junc": null,
+                        "lat": 37.6657281,
+                        "lng": 127.0577154,
+                        "lookAt": [127.0576888, 37.6658191],
+                        "path": "127.0577154,37.6657281 127.0576888,37.6658191",
+                        "poi": null,
+                        "road": null,
+                        "turn": 3,
+                        "turnDesc": "오른쪽 방향",
+                        "turnInfo": null,
+                        "upwa": null
+                      },
+                      {
+                        "cross": null,
+                        "distance": 2,
+                        "duration": 7,
+                        "eye": [127.0577129, 37.6657678],
+                        "junc": null,
+                        "lat": 37.6658191,
+                        "lng": 127.0576888,
+                        "lookAt": [127.0576717, 37.6658307],
+                        "path": "127.0576888,37.6658191 127.0576717,37.6658307",
+                        "poi": null,
+                        "road": null,
+                        "turn": 12,
+                        "turnDesc": "마들역 2번 출구",
+                        "turnInfo": null,
+                        "upwa": {
+                          "from": { "exit": "2", "name": "마들역" },
+                          "to": null
+                        }
+                      },
+                      {
+                        "cross": null,
+                        "distance": 0,
+                        "duration": 0,
+                        "eye": [127.0577253, 37.6657696],
+                        "junc": null,
+                        "lat": 37.6658307,
+                        "lng": 127.0576717,
+                        "lookAt": [127.0576717, 37.6658307],
+                        "path": "127.0576717,37.6658307 127.0576637,37.6658361 127.0576266,37.6659766 127.0574884,37.6659544 127.0575396,37.6657410 127.0576347,37.6653817",
+                        "poi": null,
+                        "road": null,
+                        "turn": 15,
+                        "turnDesc": "마들",
+                        "turnInfo": "도로의 왼쪽에 있습니다.",
+                        "upwa": null
+                      }
+                    ],
+                    "summary": { "distance": 75, "duration": 113 }
+                  }
+                ],
+                "summary": {
+                  "bound": [
+                    [127.0575396, 37.6653817],
+                    [127.0577288, 37.6658307]
+                  ],
+                  "crosswalk": 0,
+                  "distance": 75,
+                  "dupOptions": [],
+                  "duration": 113,
+                  "facilityDesc": null,
+                  "option": "reco",
+                  "overpass": 0,
+                  "stair": 1,
+                  "stepCount": 117,
+                  "underpass": 2,
+                  "ways": [
+                    {
+                      "lat": 37.6653817,
+                      "lng": 127.0576347,
+                      "multiEntrance": false,
+                      "name": "출발"
+                    },
+                    {
+                      "lat": 37.6658307,
+                      "lng": 127.0576717,
+                      "multiEntrance": true,
+                      "name": "마들"
+                    }
+                  ]
+                }
+              },
+              "shutdown": false,
+              "lastTrip": false,
+              "firstTrip": false,
+              "departureCity": null,
+              "stationIdAsOptional": 712
+            },
+            {
+              "type": "SUBWAY",
+              "instruction": "지하철 승차",
+              "info": { "walk": null, "etc": "지하철 승차", "subway": null },
+              "departureTime": "2022-05-20T22:55:20",
+              "arrivalTime": "2022-05-20T23:09:40",
+              "alarmTime": {
+                "alarmDepartureTime": null,
+                "alarmArrivalTime": null
+              },
+              "distance": 8200,
+              "duration": 14,
+              "tripIdx": 3232,
+              "headsign": "온수",
+              "wayType": "DOWN",
+              "routes": [
+                {
+                  "id": 7,
+                  "name": "7호선",
+                  "longName": "수도권7호선(장암-석남)",
+                  "type": {
+                    "id": 7,
+                    "name": "7호선",
+                    "shortName": "7호선",
+                    "iconName": "7",
+                    "color": "#697215"
+                  },
+                  "realtime": false,
+                  "useInterval": false,
+                  "operationType": "일반",
+                  "operation": {
+                    "type": "NORMAL",
+                    "name": "일반",
+                    "shortName": "일"
+                  },
+                  "color": null,
+                  "platform": {
+                    "status": "EXIST",
+                    "type": { "code": "EXIT", "desc": "빠른하차" },
+                    "door": "5-4",
+                    "doors": ["5-4"]
+                  },
+                  "headsign": "석남",
+                  "busInterval": null,
+                  "flag": null
+                }
+              ],
+              "stations": [
+                {
+                  "id": 712,
+                  "placeId": "13479537",
+                  "name": "마들",
+                  "longName": null,
+                  "displayName": "마들역",
+                  "displayCode": "712",
+                  "stop": true,
+                  "realtime": false,
+                  "aux": {
+                    "platform": { "id": 1, "name": "중앙" },
+                    "crossover": { "id": 2, "name": "연결됨" },
+                    "door": { "id": 0, "name": "왼쪽" },
+                    "restroom": { "id": 2, "name": "바깥" },
+                    "facilities": [
+                      "유실물센터",
+                      "자전거보관소",
+                      "장애인편의시설",
+                      "무인민원발급",
+                      "물품보관소"
+                    ],
+                    "disabledFacilities": [
+                      "엘리베이터",
+                      "계단 핸드레일(점자표기)",
+                      "장애인용 화장실",
+                      "점자유도블럭"
+                    ],
+                    "lostCenter": {
+                      "url": "http://www.seoulmetro.co.kr/kr/page.do?menuIdx=541",
+                      "tel": "02-6311-6766/02-6311-6766"
+                    }
+                  }
+                },
+                {
+                  "id": 713,
+                  "placeId": "20536605",
+                  "name": "노원",
+                  "longName": null,
+                  "displayName": "노원역",
+                  "displayCode": "713",
+                  "stop": true,
+                  "realtime": false,
+                  "aux": {
+                    "platform": { "id": 1, "name": "중앙" },
+                    "crossover": { "id": 2, "name": "연결됨" },
+                    "door": { "id": 0, "name": "왼쪽" },
+                    "restroom": { "id": 2, "name": "바깥" },
+                    "facilities": [
+                      "유실물센터",
+                      "자전거보관소",
+                      "장애인편의시설",
+                      "수유방",
+                      "물품보관소"
+                    ],
+                    "disabledFacilities": [
+                      "엘리베이터",
+                      "계단 핸드레일(점자표기)",
+                      "장애인용 화장실",
+                      "점자유도블럭"
+                    ],
+                    "lostCenter": {
+                      "url": "http://www.seoulmetro.co.kr/kr/page.do?menuIdx=541",
+                      "tel": "02-6311-6766/02-6311-6766"
+                    }
+                  }
+                },
+                {
+                  "id": 714,
+                  "placeId": "13479538",
+                  "name": "중계",
+                  "longName": null,
+                  "displayName": "중계역",
+                  "displayCode": "714",
+                  "stop": true,
+                  "realtime": false,
+                  "aux": {
+                    "platform": { "id": 1, "name": "중앙" },
+                    "crossover": { "id": 2, "name": "연결됨" },
+                    "door": { "id": 0, "name": "왼쪽" },
+                    "restroom": { "id": 2, "name": "바깥" },
+                    "facilities": [
+                      "유실물센터",
+                      "자전거보관소",
+                      "장애인편의시설",
+                      "물품보관소"
+                    ],
+                    "disabledFacilities": [
+                      "엘리베이터",
+                      "휠체어리프트",
+                      "계단 핸드레일(점자표기)",
+                      "장애인용 화장실",
+                      "점자유도블럭"
+                    ],
+                    "lostCenter": {
+                      "url": "http://www.seoulmetro.co.kr/kr/page.do?menuIdx=541",
+                      "tel": "02-6311-6766/02-6311-6766"
+                    }
+                  }
+                },
+                {
+                  "id": 715,
+                  "placeId": "13479539",
+                  "name": "하계",
+                  "longName": null,
+                  "displayName": "하계역",
+                  "displayCode": "715",
+                  "stop": true,
+                  "realtime": false,
+                  "aux": {
+                    "platform": { "id": 1, "name": "중앙" },
+                    "crossover": { "id": 2, "name": "연결됨" },
+                    "door": { "id": 0, "name": "왼쪽" },
+                    "restroom": { "id": 2, "name": "바깥" },
+                    "facilities": [
+                      "유실물센터",
+                      "자전거보관소",
+                      "장애인편의시설",
+                      "수유방",
+                      "물품보관소"
+                    ],
+                    "disabledFacilities": [
+                      "엘리베이터",
+                      "휠체어리프트",
+                      "계단 핸드레일(점자표기)",
+                      "장애인용 화장실",
+                      "점자유도블럭"
+                    ],
+                    "lostCenter": {
+                      "url": "http://www.seoulmetro.co.kr/kr/page.do?menuIdx=541",
+                      "tel": "02-6311-6766/02-6311-6766"
+                    }
+                  }
+                },
+                {
+                  "id": 716,
+                  "placeId": "13479540",
+                  "name": "공릉",
+                  "longName": null,
+                  "displayName": "공릉역",
+                  "displayCode": "716",
+                  "stop": true,
+                  "realtime": false,
+                  "aux": {
+                    "platform": { "id": 2, "name": "양쪽" },
+                    "crossover": { "id": 2, "name": "연결됨" },
+                    "door": { "id": 1, "name": "오른쪽" },
+                    "restroom": { "id": 2, "name": "바깥" },
+                    "facilities": [
+                      "유실물센터",
+                      "자전거보관소",
+                      "장애인편의시설",
+                      "물품보관소"
+                    ],
+                    "disabledFacilities": [
+                      "엘리베이터",
+                      "계단 핸드레일(점자표기)",
+                      "장애인용 화장실",
+                      "점자유도블럭"
+                    ],
+                    "lostCenter": {
+                      "url": "http://www.seoulmetro.co.kr/kr/page.do?menuIdx=541",
+                      "tel": "02-6311-6766/02-6311-6766"
+                    }
+                  }
+                },
+                {
+                  "id": 717,
+                  "placeId": "20536727",
+                  "name": "태릉입구",
+                  "longName": null,
+                  "displayName": "태릉입구역",
+                  "displayCode": "717",
+                  "stop": true,
+                  "realtime": false,
+                  "aux": {
+                    "platform": { "id": 2, "name": "양쪽" },
+                    "crossover": { "id": 2, "name": "연결됨" },
+                    "door": { "id": 1, "name": "오른쪽" },
+                    "restroom": { "id": 2, "name": "바깥" },
+                    "facilities": [
+                      "유실물센터",
+                      "자전거보관소",
+                      "장애인편의시설",
+                      "수유방",
+                      "물품보관소"
+                    ],
+                    "disabledFacilities": [
+                      "엘리베이터",
+                      "계단 핸드레일(점자표기)",
+                      "장애인용 화장실",
+                      "점자유도블럭"
+                    ],
+                    "lostCenter": {
+                      "url": "http://www.seoulmetro.co.kr/kr/page.do?menuIdx=541",
+                      "tel": "02-6311-6766/02-6311-6766"
+                    }
+                  }
+                },
+                {
+                  "id": 718,
+                  "placeId": "13479541",
+                  "name": "먹골",
+                  "longName": null,
+                  "displayName": "먹골역",
+                  "displayCode": "718",
+                  "stop": true,
+                  "realtime": false,
+                  "aux": {
+                    "platform": { "id": 2, "name": "양쪽" },
+                    "crossover": { "id": 1, "name": "연결안됨" },
+                    "door": { "id": 1, "name": "오른쪽" },
+                    "restroom": { "id": 2, "name": "바깥" },
+                    "facilities": [
+                      "유실물센터",
+                      "자전거보관소",
+                      "장애인편의시설",
+                      "물품보관소"
+                    ],
+                    "disabledFacilities": [
+                      "계단 핸드레일(점자표기)",
+                      "장애인용 화장실",
+                      "점자유도블럭"
+                    ],
+                    "lostCenter": {
+                      "url": "http://www.seoulmetro.co.kr/kr/page.do?menuIdx=541",
+                      "tel": "02-6311-6766/02-6311-6766"
+                    }
+                  }
+                },
+                {
+                  "id": 719,
+                  "placeId": "13479542",
+                  "name": "중화",
+                  "longName": null,
+                  "displayName": "중화역",
+                  "displayCode": "719",
+                  "stop": true,
+                  "realtime": false,
+                  "aux": {
+                    "platform": { "id": 2, "name": "양쪽" },
+                    "crossover": { "id": 2, "name": "연결됨" },
+                    "door": { "id": 1, "name": "오른쪽" },
+                    "restroom": { "id": 2, "name": "바깥" },
+                    "facilities": [
+                      "유실물센터",
+                      "자전거보관소",
+                      "장애인편의시설",
+                      "물품보관소"
+                    ],
+                    "disabledFacilities": [
+                      "계단 핸드레일(점자표기)",
+                      "장애인용 화장실",
+                      "점자유도블럭"
+                    ],
+                    "lostCenter": {
+                      "url": "http://www.seoulmetro.co.kr/kr/page.do?menuIdx=541",
+                      "tel": "02-6311-6766/02-6311-6766"
+                    }
+                  }
+                },
+                {
+                  "id": 720,
+                  "placeId": "13479543",
+                  "name": "상봉",
+                  "longName": null,
+                  "displayName": "상봉역",
+                  "displayCode": "720",
+                  "stop": true,
+                  "realtime": false,
+                  "aux": {
+                    "platform": { "id": 2, "name": "양쪽" },
+                    "crossover": { "id": 2, "name": "연결됨" },
+                    "door": { "id": 1, "name": "오른쪽" },
+                    "restroom": { "id": 1, "name": "안쪽" },
+                    "facilities": [
+                      "유실물센터",
+                      "자전거보관소",
+                      "장애인편의시설",
+                      "수유방",
+                      "물품보관소"
+                    ],
+                    "disabledFacilities": [
+                      "엘리베이터",
+                      "휠체어리프트",
+                      "계단 핸드레일(점자표기)",
+                      "장애인용 화장실",
+                      "점자유도블럭"
+                    ],
+                    "lostCenter": {
+                      "url": "http://www.seoulmetro.co.kr/kr/page.do?menuIdx=541",
+                      "tel": "02-6311-6766/02-6311-6766"
+                    }
+                  }
+                }
+              ],
+              "arrivals": [],
+              "points": [
+                { "x": 127.0576324, "y": 37.6653824 },
+                { "x": 127.0586166, "y": 37.6618309 },
+                { "x": 127.059494, "y": 37.6585922 },
+                { "x": 127.0600433, "y": 37.6565781 },
+                { "x": 127.0603409, "y": 37.6554832 },
+                { "x": 127.060524, "y": 37.6546898 },
+                { "x": 127.060524, "y": 37.6546898 },
+                { "x": 127.0607605, "y": 37.6539268 },
+                { "x": 127.0613708, "y": 37.65168 },
+                { "x": 127.0618591, "y": 37.6498642 },
+                { "x": 127.0619965, "y": 37.6493683 },
+                { "x": 127.0620728, "y": 37.6491356 },
+                { "x": 127.0634232, "y": 37.6465492 },
+                { "x": 127.0641098, "y": 37.6451149 },
+                { "x": 127.0641098, "y": 37.6451149 },
+                { "x": 127.0651093, "y": 37.6430779 },
+                { "x": 127.0659485, "y": 37.6411819 },
+                { "x": 127.0670547, "y": 37.6386681 },
+                { "x": 127.067955, "y": 37.6365662 },
+                { "x": 127.067955, "y": 37.6365662 },
+                { "x": 127.069809, "y": 37.6324997 },
+                { "x": 127.0712509, "y": 37.6292763 },
+                { "x": 127.0720215, "y": 37.6277313 },
+                { "x": 127.0729294, "y": 37.6257668 },
+                { "x": 127.0729294, "y": 37.6257668 },
+                { "x": 127.0731506, "y": 37.6253624 },
+                { "x": 127.0735245, "y": 37.6243286 },
+                { "x": 127.0744095, "y": 37.6215782 },
+                { "x": 127.0753632, "y": 37.6184769 },
+                { "x": 127.0753632, "y": 37.6184769 },
+                { "x": 127.0756454, "y": 37.6176491 },
+                { "x": 127.0764542, "y": 37.6153412 },
+                { "x": 127.0769806, "y": 37.6137505 },
+                { "x": 127.0773849, "y": 37.6124916 },
+                { "x": 127.0774918, "y": 37.6121407 },
+                { "x": 127.0776596, "y": 37.6112328 },
+                { "x": 127.0777359, "y": 37.6107941 },
+                { "x": 127.0777359, "y": 37.6107941 },
+                { "x": 127.0779648, "y": 37.6097946 },
+                { "x": 127.078598, "y": 37.6065903 },
+                { "x": 127.0791092, "y": 37.6037941 },
+                { "x": 127.0793076, "y": 37.6025772 },
+                { "x": 127.0793076, "y": 37.6025772 },
+                { "x": 127.0794754, "y": 37.6017227 },
+                { "x": 127.0796509, "y": 37.6013031 },
+                { "x": 127.0799942, "y": 37.6007996 },
+                { "x": 127.0803757, "y": 37.6003685 },
+                { "x": 127.0808334, "y": 37.6000023 },
+                { "x": 127.0812225, "y": 37.5997925 },
+                { "x": 127.0824509, "y": 37.5990448 },
+                { "x": 127.0838547, "y": 37.5982056 },
+                { "x": 127.0844727, "y": 37.5977707 },
+                { "x": 127.0846481, "y": 37.5976295 },
+                { "x": 127.0849228, "y": 37.5973434 },
+                { "x": 127.0852203, "y": 37.5970993 },
+                { "x": 127.0853577, "y": 37.5969315 },
+                { "x": 127.0854492, "y": 37.5967598 },
+                { "x": 127.0855789, "y": 37.5963745 },
+                { "x": 127.0856705, "y": 37.5959244 },
+                { "x": 127.0856705, "y": 37.5959244 }
+              ],
+              "walkpath": null,
+              "shutdown": false,
+              "lastTrip": false,
+              "firstTrip": false,
+              "departureCity": null,
+              "stationIdAsOptional": null
+            }
+          ]
+        }
+      ],
+      "transferCount": 0,
+      "directionsType": "CITY",
+      "pathLabels": [
+        { "labelCode": "BEST", "labelText": "최적" },
+        { "labelCode": "MINIMUM_DURATION", "labelText": "최소시간" },
+        { "labelCode": "MINIMUM_TRANSFER", "labelText": "최소환승" },
+        { "labelCode": "MINIMUM_WALKING", "labelText": "최소도보" }
+      ],
+      "vehicleTypes": ["SUBWAY"]
+    },
+    {
+      "idx": 2,
+      "mode": "TIME",
+      "type": "BUS",
+      "optimizationMethod": "RECOMMEND",
+      "labels": [],
+      "departureTime": "2022-05-20T23:03:46",
+      "arrivalTime": "2022-05-20T23:45:46",
+      "alarmDepartureTime": null,
+      "alarmArrivalTime": null,
+      "duration": 42,
+      "intercityDuration": 0,
+      "walkingDuration": 15,
+      "waitingDuration": 2,
+      "distance": 12195,
+      "shutdown": false,
+      "fare": 2800,
+      "fares": [
+        {
+          "routes": [
+            [
+              {
+                "id": 17516,
+                "name": "3200",
+                "longName": "3200",
+                "type": {
+                  "id": 4,
+                  "name": "직행좌석",
+                  "shortName": "직행좌석",
+                  "iconName": "직행",
+                  "color": "#fb5852"
+                },
+                "realtime": true,
+                "useInterval": true,
+                "operationType": "일반",
+                "operation": {
+                  "type": "NORMAL",
+                  "name": "일반",
+                  "shortName": "일"
+                },
+                "color": null,
+                "platform": null,
+                "headsign": null,
+                "busInterval": null,
+                "flag": null
+              }
+            ],
+            [
+              {
+                "id": 1447,
+                "name": "260",
+                "longName": "260",
+                "type": {
+                  "id": 11,
+                  "name": "간선",
+                  "shortName": "간선",
+                  "iconName": "간선",
+                  "color": "#386de8"
+                },
+                "realtime": true,
+                "useInterval": true,
+                "operationType": "일반",
+                "operation": {
+                  "type": "NORMAL",
+                  "name": "일반",
+                  "shortName": "일"
+                },
+                "color": null,
+                "platform": null,
+                "headsign": null,
+                "busInterval": null,
+                "flag": null
+              },
+              {
+                "id": 1710,
+                "name": "241",
+                "longName": "241",
+                "type": {
+                  "id": 11,
+                  "name": "간선",
+                  "shortName": "간선",
+                  "iconName": "간선",
+                  "color": "#386de8"
+                },
+                "realtime": true,
+                "useInterval": true,
+                "operationType": "일반",
+                "operation": {
+                  "type": "NORMAL",
+                  "name": "일반",
+                  "shortName": "일"
+                },
+                "color": null,
+                "platform": null,
+                "headsign": null,
+                "busInterval": null,
+                "flag": null
+              },
+              {
+                "id": 988,
+                "name": "270",
+                "longName": "270",
+                "type": {
+                  "id": 11,
+                  "name": "간선",
+                  "shortName": "간선",
+                  "iconName": "간선",
+                  "color": "#386de8"
+                },
+                "realtime": true,
+                "useInterval": true,
+                "operationType": "일반",
+                "operation": {
+                  "type": "NORMAL",
+                  "name": "일반",
+                  "shortName": "일"
+                },
+                "color": null,
+                "platform": null,
+                "headsign": null,
+                "busInterval": null,
+                "flag": null
+              },
+              {
+                "id": 942,
+                "name": "201",
+                "longName": "201",
+                "type": {
+                  "id": 11,
+                  "name": "간선",
+                  "shortName": "간선",
+                  "iconName": "간선",
+                  "color": "#386de8"
+                },
+                "realtime": true,
+                "useInterval": true,
+                "operationType": "일반",
+                "operation": {
+                  "type": "NORMAL",
+                  "name": "일반",
+                  "shortName": "일"
+                },
+                "color": null,
+                "platform": null,
+                "headsign": null,
+                "busInterval": null,
+                "flag": null
+              }
+            ]
+          ],
+          "fare": 2800,
+          "tripIdx": 350874
+        }
+      ],
+      "legs": [
+        {
+          "steps": [
+            {
+              "type": "WALKING",
+              "instruction": "도보 110m",
+              "info": { "walk": "도보 110m", "etc": null, "subway": null },
+              "departureTime": "2022-05-20T23:03:46",
+              "arrivalTime": "2022-05-20T23:06:11",
+              "alarmTime": {
+                "alarmDepartureTime": null,
+                "alarmArrivalTime": null
+              },
+              "distance": 110,
+              "duration": 2,
+              "tripIdx": null,
+              "headsign": null,
+              "wayType": null,
+              "routes": [],
+              "stations": [],
+              "arrivals": [],
+              "points": [
+                { "x": 127.0576351, "y": 37.6653828 },
+                { "x": 127.0574722, "y": 37.6651917 }
+              ],
+              "walkpath": {
+                "legs": [
+                  {
+                    "steps": [
+                      {
+                        "cross": null,
+                        "distance": 0,
+                        "duration": 0,
+                        "eye": [127.0576347, 37.6653817],
+                        "junc": null,
+                        "lat": 37.6653817,
+                        "lng": 127.0576347,
+                        "lookAt": [127.0576579, 37.6652917],
+                        "path": null,
+                        "poi": null,
+                        "road": null,
+                        "turn": 14,
+                        "turnDesc": "출발",
+                        "turnInfo": null,
+                        "upwa": null
+                      },
+                      {
+                        "cross": null,
+                        "distance": 89,
+                        "duration": 126,
+                        "eye": [127.0576347, 37.6653817],
+                        "junc": null,
+                        "lat": 37.6653817,
+                        "lng": 127.0576347,
+                        "lookAt": [127.0576579, 37.6652917],
+                        "path": "127.0576347,37.6653817 127.0577634,37.6648901 127.0575879,37.6648615 127.0575577,37.6649767 127.0575303,37.6650073",
+                        "poi": null,
+                        "road": "동일로",
+                        "turn": 12,
+                        "turnDesc": "마들역 6번 출구",
+                        "turnInfo": null,
+                        "upwa": {
+                          "from": null,
+                          "to": { "exit": "6", "name": "마들역" }
+                        }
+                      },
+                      {
+                        "cross": null,
+                        "distance": 21,
+                        "duration": 18,
+                        "eye": [127.0575832, 37.6648786],
+                        "junc": null,
+                        "lat": 37.6650073,
+                        "lng": 127.0575303,
+                        "lookAt": [127.0575059, 37.6650991],
+                        "path": "127.0575303,37.6650073 127.0574827,37.6651919",
+                        "poi": null,
+                        "road": null,
+                        "turn": 1,
+                        "turnDesc": "직진",
+                        "turnInfo": null,
+                        "upwa": null
+                      },
+                      {
+                        "cross": null,
+                        "distance": 0,
+                        "duration": 0,
+                        "eye": [127.0575176, 37.6650532],
+                        "junc": null,
+                        "lat": 37.6651919,
+                        "lng": 127.0574827,
+                        "lookAt": [127.0574827, 37.6651919],
+                        "path": null,
+                        "poi": null,
+                        "road": null,
+                        "turn": 15,
+                        "turnDesc": "마들역",
+                        "turnInfo": "도로의 왼쪽에 있습니다.",
+                        "upwa": null
+                      }
+                    ],
+                    "summary": { "distance": 110, "duration": 145 }
+                  }
+                ],
+                "summary": {
+                  "bound": [
+                    [127.0574827, 37.6648615],
+                    [127.0577634, 37.6653817]
+                  ],
+                  "crosswalk": 0,
+                  "distance": 110,
+                  "dupOptions": [],
+                  "duration": 145,
+                  "facilityDesc": null,
+                  "option": "reco",
+                  "overpass": 0,
+                  "stair": 0,
+                  "stepCount": 171,
+                  "underpass": 1,
+                  "ways": [
+                    {
+                      "lat": 37.6653817,
+                      "lng": 127.0576347,
+                      "multiEntrance": false,
+                      "name": "출발"
+                    },
+                    {
+                      "lat": 37.6651919,
+                      "lng": 127.0574827,
+                      "multiEntrance": false,
+                      "name": "마들역"
+                    }
+                  ]
+                }
+              },
+              "shutdown": false,
+              "lastTrip": false,
+              "firstTrip": false,
+              "departureCity": null,
+              "stationIdAsOptional": null
+            },
+            {
+              "type": "BUS",
+              "instruction": "버스 승차",
+              "info": { "walk": null, "etc": "버스 승차", "subway": null },
+              "departureTime": "2022-05-20T23:06:11",
+              "arrivalTime": "2022-05-20T23:25:50",
+              "alarmTime": {
+                "alarmDepartureTime": null,
+                "alarmArrivalTime": null
+              },
+              "distance": 9982,
+              "duration": 20,
+              "tripIdx": 350874,
+              "headsign": null,
+              "wayType": "DOWN",
+              "routes": [
+                {
+                  "id": 17516,
+                  "name": "3200",
+                  "longName": "3200",
+                  "type": {
+                    "id": 4,
+                    "name": "직행좌석",
+                    "shortName": "직행좌석",
+                    "iconName": "직행",
+                    "color": "#fb5852"
+                  },
+                  "realtime": true,
+                  "useInterval": true,
+                  "operationType": "일반",
+                  "operation": {
+                    "type": "NORMAL",
+                    "name": "일반",
+                    "shortName": "일"
+                  },
+                  "color": null,
+                  "platform": null,
+                  "headsign": null,
+                  "busInterval": {
+                    "message": { "date": "평일", "intervalCount": "15-20분" }
+                  },
+                  "flag": null
+                }
+              ],
+              "stations": [
+                {
+                  "id": 197899,
+                  "placeId": null,
+                  "name": "마들역",
+                  "longName": null,
+                  "displayName": "마들역",
+                  "displayCode": "11829",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 107682,
+                  "placeId": null,
+                  "name": "도봉면허시험장",
+                  "longName": null,
+                  "displayName": "도봉면허시험장",
+                  "displayCode": "11186",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 107727,
+                  "placeId": null,
+                  "name": "상계주공3단지",
+                  "longName": null,
+                  "displayName": "상계주공3단지",
+                  "displayCode": "11244",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 107818,
+                  "placeId": null,
+                  "name": "상계주공1단지",
+                  "longName": null,
+                  "displayName": "상계주공1단지",
+                  "displayCode": "11246",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 107935,
+                  "placeId": null,
+                  "name": "노원구민의전당",
+                  "longName": null,
+                  "displayName": "노원구민의전당",
+                  "displayCode": "11367",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 107986,
+                  "placeId": null,
+                  "name": "하계역",
+                  "longName": null,
+                  "displayName": "하계역",
+                  "displayCode": "11447",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 107947,
+                  "placeId": null,
+                  "name": "하계우성아파트",
+                  "longName": null,
+                  "displayName": "하계우성아파트",
+                  "displayCode": "11454",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 107879,
+                  "placeId": null,
+                  "name": "하계극동아파트",
+                  "longName": null,
+                  "displayName": "하계극동아파트",
+                  "displayCode": "11452",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 80458,
+                  "placeId": null,
+                  "name": "휘경미소지움아파트",
+                  "longName": null,
+                  "displayName": "휘경미소지움아파트",
+                  "displayCode": "06422",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                }
+              ],
+              "arrivals": [
+                {
+                  "status": "RUNNING",
+                  "stationId": 197899,
+                  "routeId": 17516,
+                  "items": [
+                    {
+                      "status": "RUNNING",
+                      "plateNo": "경기72바6188",
+                      "lowFloor": false,
+                      "remainingTime": 17,
+                      "remainingStop": 1,
+                      "remainingSeat": 44,
+                      "congestion": { "code": "NONE", "desc": "정보없음" },
+                      "last": false
+                    },
+                    {
+                      "status": "RUNNING",
+                      "plateNo": "경기77아6244",
+                      "lowFloor": false,
+                      "remainingTime": 984,
+                      "remainingStop": 6,
+                      "remainingSeat": 33,
+                      "congestion": { "code": "NONE", "desc": "정보없음" },
+                      "last": false
+                    }
+                  ]
+                }
+              ],
+              "points": [
+                { "x": 127.0574722, "y": 37.6651917 },
+                { "x": 127.0583496, "y": 37.6617317 },
+                { "x": 127.0595932, "y": 37.6573067 },
+                { "x": 127.0595932, "y": 37.6573067 },
+                { "x": 127.0610199, "y": 37.6520004 },
+                { "x": 127.0610199, "y": 37.6520004 },
+                { "x": 127.061615, "y": 37.6499138 },
+                { "x": 127.0617065, "y": 37.6494637 },
+                { "x": 127.061882, "y": 37.6490173 },
+                { "x": 127.0625839, "y": 37.6476517 },
+                { "x": 127.0625839, "y": 37.6476517 },
+                { "x": 127.0637512, "y": 37.6453552 },
+                { "x": 127.0657196, "y": 37.6410789 },
+                { "x": 127.0664673, "y": 37.6393738 },
+                { "x": 127.0664673, "y": 37.6393738 },
+                { "x": 127.0667343, "y": 37.6388245 },
+                { "x": 127.0670319, "y": 37.6381569 },
+                { "x": 127.0673752, "y": 37.63731 },
+                { "x": 127.0676117, "y": 37.6367073 },
+                { "x": 127.0676117, "y": 37.6367073 },
+                { "x": 127.0678177, "y": 37.6362419 },
+                { "x": 127.0679092, "y": 37.636055 },
+                { "x": 127.0678711, "y": 37.6359673 },
+                { "x": 127.0673218, "y": 37.6355896 },
+                { "x": 127.0668564, "y": 37.6352882 },
+                { "x": 127.0668564, "y": 37.6352882 },
+                { "x": 127.0658798, "y": 37.6346588 },
+                { "x": 127.0648575, "y": 37.6339912 },
+                { "x": 127.0648575, "y": 37.6339912 },
+                { "x": 127.0643311, "y": 37.6336746 },
+                { "x": 127.0630341, "y": 37.6328201 },
+                { "x": 127.0615997, "y": 37.6319771 },
+                { "x": 127.0590134, "y": 37.6303406 },
+                { "x": 127.0589447, "y": 37.6302414 },
+                { "x": 127.0589676, "y": 37.6301346 },
+                { "x": 127.0590973, "y": 37.6301003 },
+                { "x": 127.0592117, "y": 37.6301193 },
+                { "x": 127.0618362, "y": 37.6317787 },
+                { "x": 127.0624542, "y": 37.6321526 },
+                { "x": 127.0625458, "y": 37.632164 },
+                { "x": 127.0626373, "y": 37.6321564 },
+                { "x": 127.0627213, "y": 37.6321487 },
+                { "x": 127.0628281, "y": 37.6320534 },
+                { "x": 127.0631027, "y": 37.631752 },
+                { "x": 127.0633392, "y": 37.6313667 },
+                { "x": 127.0634613, "y": 37.6310349 },
+                { "x": 127.0635223, "y": 37.6307869 },
+                { "x": 127.063591, "y": 37.6305389 },
+                { "x": 127.0636444, "y": 37.6303787 },
+                { "x": 127.0640182, "y": 37.629425 },
+                { "x": 127.0642166, "y": 37.6287956 },
+                { "x": 127.0644302, "y": 37.6283493 },
+                { "x": 127.0646362, "y": 37.6280365 },
+                { "x": 127.0648727, "y": 37.6277122 },
+                { "x": 127.0650864, "y": 37.6274986 },
+                { "x": 127.0658112, "y": 37.6268921 },
+                { "x": 127.0666122, "y": 37.6261864 },
+                { "x": 127.0681992, "y": 37.6248474 },
+                { "x": 127.0687332, "y": 37.6243172 },
+                { "x": 127.0690155, "y": 37.6239319 },
+                { "x": 127.0692596, "y": 37.6234932 },
+                { "x": 127.069458, "y": 37.6229744 },
+                { "x": 127.0697632, "y": 37.6220741 },
+                { "x": 127.0700912, "y": 37.6210899 },
+                { "x": 127.0702209, "y": 37.6205597 },
+                { "x": 127.0702667, "y": 37.620079 },
+                { "x": 127.070282, "y": 37.6197014 },
+                { "x": 127.0702744, "y": 37.6185188 },
+                { "x": 127.0702362, "y": 37.6173286 },
+                { "x": 127.0702438, "y": 37.6167068 },
+                { "x": 127.0702896, "y": 37.6164207 },
+                { "x": 127.0703659, "y": 37.6161079 },
+                { "x": 127.0705948, "y": 37.6155357 },
+                { "x": 127.0706482, "y": 37.6151237 },
+                { "x": 127.0706635, "y": 37.6148415 },
+                { "x": 127.0706024, "y": 37.6137657 },
+                { "x": 127.0705795, "y": 37.612484 },
+                { "x": 127.0706177, "y": 37.6100426 },
+                { "x": 127.0706406, "y": 37.6092873 },
+                { "x": 127.0706482, "y": 37.6082954 },
+                { "x": 127.0707321, "y": 37.6070633 },
+                { "x": 127.0707779, "y": 37.6063042 },
+                { "x": 127.0708923, "y": 37.6053886 },
+                { "x": 127.0712509, "y": 37.6036415 },
+                { "x": 127.0714569, "y": 37.6025085 },
+                { "x": 127.0714569, "y": 37.6020737 },
+                { "x": 127.0714264, "y": 37.6017075 },
+                { "x": 127.0713501, "y": 37.6013107 },
+                { "x": 127.071228, "y": 37.6009369 },
+                { "x": 127.0710068, "y": 37.6005669 },
+                { "x": 127.0704803, "y": 37.5998955 },
+                { "x": 127.0700073, "y": 37.5993347 },
+                { "x": 127.0696487, "y": 37.5989799 },
+                { "x": 127.069397, "y": 37.5987091 },
+                { "x": 127.0691986, "y": 37.5984268 },
+                { "x": 127.068924, "y": 37.5980263 },
+                { "x": 127.0686874, "y": 37.5975838 },
+                { "x": 127.0684891, "y": 37.5971336 },
+                { "x": 127.0683289, "y": 37.5967178 },
+                { "x": 127.0682297, "y": 37.5963631 },
+                { "x": 127.0682297, "y": 37.5960236 },
+                { "x": 127.0682678, "y": 37.5958252 },
+                { "x": 127.0683441, "y": 37.5954552 },
+                { "x": 127.068512, "y": 37.5947914 },
+                { "x": 127.0687103, "y": 37.5941963 },
+                { "x": 127.0690231, "y": 37.5932999 },
+                { "x": 127.0692444, "y": 37.5925903 },
+                { "x": 127.0692596, "y": 37.5924606 },
+                { "x": 127.0692062, "y": 37.5923729 },
+                { "x": 127.0690918, "y": 37.5922852 },
+                { "x": 127.0643921, "y": 37.5908928 },
+                { "x": 127.0643921, "y": 37.5908928 }
+              ],
+              "walkpath": null,
+              "shutdown": false,
+              "lastTrip": false,
+              "firstTrip": false,
+              "departureCity": null,
+              "stationIdAsOptional": null
+            },
+            {
+              "type": "WALKING",
+              "instruction": "도보 302m",
+              "info": { "walk": "도보 302m", "etc": null, "subway": null },
+              "departureTime": "2022-05-20T23:25:50",
+              "arrivalTime": "2022-05-20T23:30:22",
+              "alarmTime": {
+                "alarmDepartureTime": null,
+                "alarmArrivalTime": null
+              },
+              "distance": 302,
+              "duration": 5,
+              "tripIdx": null,
+              "headsign": null,
+              "wayType": null,
+              "routes": [],
+              "stations": [],
+              "arrivals": [],
+              "points": [
+                { "x": 127.0643921, "y": 37.5908928 },
+                { "x": 127.066658, "y": 37.5913887 }
+              ],
+              "walkpath": {
+                "legs": [
+                  {
+                    "steps": [
+                      {
+                        "cross": null,
+                        "distance": 0,
+                        "duration": 0,
+                        "eye": [127.0644046, 37.5908597],
+                        "junc": null,
+                        "lat": 37.5908597,
+                        "lng": 127.0644046,
+                        "lookAt": [127.0645143, 37.5908899],
+                        "path": null,
+                        "poi": null,
+                        "road": null,
+                        "turn": 14,
+                        "turnDesc": "휘경미소지움아파트",
+                        "turnInfo": null,
+                        "upwa": null
+                      },
+                      {
+                        "cross": null,
+                        "distance": 244,
+                        "duration": 276,
+                        "eye": [127.0644046, 37.5908597],
+                        "junc": null,
+                        "lat": 37.5908597,
+                        "lng": 127.0644046,
+                        "lookAt": [127.0645143, 37.5908899],
+                        "path": "127.0644046,37.5908597 127.0646025,37.5909146 127.0648490,37.5909840 127.0651374,37.5910589 127.0662308,37.5913947 127.0669929,37.5916363",
+                        "poi": null,
+                        "road": null,
+                        "turn": 1,
+                        "turnDesc": "KB국민은행 휘경동까지 직진",
+                        "turnInfo": null,
+                        "upwa": null
+                      },
+                      {
+                        "cross": null,
+                        "distance": 18,
+                        "duration": 16,
+                        "eye": [127.0668335, 37.5915853],
+                        "junc": null,
+                        "lat": 37.5916363,
+                        "lng": 127.0669929,
+                        "lookAt": [127.0670432, 37.5915509],
+                        "path": "127.0669929,37.5916363 127.0670638,37.5915167 127.0670810,37.5914870",
+                        "poi": null,
+                        "road": null,
+                        "turn": 8,
+                        "turnDesc": "KB국민은행 휘경동에서 횡단보도 건너기",
+                        "turnInfo": null,
+                        "upwa": null
+                      },
+                      {
+                        "cross": null,
+                        "distance": 39,
+                        "duration": 37,
+                        "eye": [127.067002, 37.5916192],
+                        "junc": null,
+                        "lat": 37.591487,
+                        "lng": 127.067081,
+                        "lookAt": [127.0669713, 37.5914542],
+                        "path": "127.0670810,37.5914870 127.0666682,37.5913638",
+                        "poi": null,
+                        "road": null,
+                        "turn": 3,
+                        "turnDesc": "오른쪽 방향",
+                        "turnInfo": null,
+                        "upwa": null
+                      },
+                      {
+                        "cross": null,
+                        "distance": 0,
+                        "duration": 0,
+                        "eye": [127.0668311, 37.5914122],
+                        "junc": null,
+                        "lat": 37.5913638,
+                        "lng": 127.0666682,
+                        "lookAt": [127.0666682, 37.5913638],
+                        "path": null,
+                        "poi": null,
+                        "road": null,
+                        "turn": 15,
+                        "turnDesc": "중랑교",
+                        "turnInfo": "도로의 오른쪽에 있습니다.",
+                        "upwa": null
+                      }
+                    ],
+                    "summary": { "distance": 301, "duration": 329 }
+                  }
+                ],
+                "summary": {
+                  "bound": [
+                    [127.0644046, 37.5908597],
+                    [127.067081, 37.5916363]
+                  ],
+                  "crosswalk": 1,
+                  "distance": 301,
+                  "dupOptions": [],
+                  "duration": 329,
+                  "facilityDesc": null,
+                  "option": "reco",
+                  "overpass": 0,
+                  "stair": 0,
+                  "stepCount": 471,
+                  "underpass": 0,
+                  "ways": [
+                    {
+                      "lat": 37.5908597,
+                      "lng": 127.0644046,
+                      "multiEntrance": false,
+                      "name": "휘경미소지움아파트"
+                    },
+                    {
+                      "lat": 37.5913638,
+                      "lng": 127.0666682,
+                      "multiEntrance": false,
+                      "name": "중랑교"
+                    }
+                  ]
+                }
+              },
+              "shutdown": false,
+              "lastTrip": false,
+              "firstTrip": false,
+              "departureCity": null,
+              "stationIdAsOptional": null
+            },
+            {
+              "type": "BUS",
+              "instruction": "버스 승차",
+              "info": { "walk": null, "etc": "버스 승차", "subway": null },
+              "departureTime": "2022-05-20T23:32:54",
+              "arrivalTime": "2022-05-20T23:37:59",
+              "alarmTime": {
+                "alarmDepartureTime": null,
+                "alarmArrivalTime": null
+              },
+              "distance": 1494,
+              "duration": 5,
+              "tripIdx": 62475,
+              "headsign": null,
+              "wayType": "DOWN",
+              "routes": [
+                {
+                  "id": 942,
+                  "name": "201",
+                  "longName": "201",
+                  "type": {
+                    "id": 11,
+                    "name": "간선",
+                    "shortName": "간선",
+                    "iconName": "간선",
+                    "color": "#386de8"
+                  },
+                  "realtime": true,
+                  "useInterval": true,
+                  "operationType": "일반",
+                  "operation": {
+                    "type": "NORMAL",
+                    "name": "일반",
+                    "shortName": "일"
+                  },
+                  "color": null,
+                  "platform": null,
+                  "headsign": null,
+                  "busInterval": {
+                    "message": { "date": "매일", "intervalCount": "17분" }
+                  },
+                  "flag": null
+                },
+                {
+                  "id": 1710,
+                  "name": "241",
+                  "longName": "241",
+                  "type": {
+                    "id": 11,
+                    "name": "간선",
+                    "shortName": "간선",
+                    "iconName": "간선",
+                    "color": "#386de8"
+                  },
+                  "realtime": true,
+                  "useInterval": true,
+                  "operationType": "일반",
+                  "operation": {
+                    "type": "NORMAL",
+                    "name": "일반",
+                    "shortName": "일"
+                  },
+                  "color": null,
+                  "platform": null,
+                  "headsign": null,
+                  "busInterval": {
+                    "message": { "date": "매일", "intervalCount": "10분" }
+                  },
+                  "flag": null
+                },
+                {
+                  "id": 988,
+                  "name": "270",
+                  "longName": "270",
+                  "type": {
+                    "id": 11,
+                    "name": "간선",
+                    "shortName": "간선",
+                    "iconName": "간선",
+                    "color": "#386de8"
+                  },
+                  "realtime": true,
+                  "useInterval": true,
+                  "operationType": "일반",
+                  "operation": {
+                    "type": "NORMAL",
+                    "name": "일반",
+                    "shortName": "일"
+                  },
+                  "color": null,
+                  "platform": null,
+                  "headsign": null,
+                  "busInterval": {
+                    "message": { "date": "매일", "intervalCount": "10분" }
+                  },
+                  "flag": null
+                },
+                {
+                  "id": 1447,
+                  "name": "260",
+                  "longName": "260",
+                  "type": {
+                    "id": 11,
+                    "name": "간선",
+                    "shortName": "간선",
+                    "iconName": "간선",
+                    "color": "#386de8"
+                  },
+                  "realtime": true,
+                  "useInterval": true,
+                  "operationType": "일반",
+                  "operation": {
+                    "type": "NORMAL",
+                    "name": "일반",
+                    "shortName": "일"
+                  },
+                  "color": null,
+                  "platform": null,
+                  "headsign": null,
+                  "busInterval": {
+                    "message": { "date": "평일", "intervalCount": "12분" }
+                  },
+                  "flag": null
+                }
+              ],
+              "stations": [
+                {
+                  "id": 117263,
+                  "placeId": null,
+                  "name": "중랑교",
+                  "longName": null,
+                  "displayName": "중랑교",
+                  "displayCode": "06010",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 117265,
+                  "placeId": null,
+                  "name": "중랑역.동부시장",
+                  "longName": null,
+                  "displayName": "중랑역.동부시장",
+                  "displayCode": "07006",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 117267,
+                  "placeId": null,
+                  "name": "상봉역.중랑우체국",
+                  "longName": null,
+                  "displayName": "상봉역.중랑우체국",
+                  "displayCode": "07004",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                }
+              ],
+              "arrivals": [
+                {
+                  "status": "RUNNING",
+                  "stationId": 117263,
+                  "routeId": 942,
+                  "items": [
+                    {
+                      "status": "RUNNING",
+                      "plateNo": "서울74사7287",
+                      "lowFloor": true,
+                      "remainingTime": 80,
+                      "remainingStop": 1,
+                      "remainingSeat": null,
+                      "congestion": { "code": "RELAXED", "desc": "여유" },
+                      "last": false
+                    },
+                    {
+                      "status": "RUNNING",
+                      "plateNo": "서울70사2712",
+                      "lowFloor": false,
+                      "remainingTime": 702,
+                      "remainingStop": 6,
+                      "remainingSeat": null,
+                      "congestion": { "code": "RELAXED", "desc": "여유" },
+                      "last": false
+                    }
+                  ]
+                },
+                {
+                  "status": "RUNNING",
+                  "stationId": 117263,
+                  "routeId": 1710,
+                  "items": [
+                    {
+                      "status": "RUNNING",
+                      "plateNo": "서울70사2763",
+                      "lowFloor": false,
+                      "remainingTime": 81,
+                      "remainingStop": 1,
+                      "remainingSeat": null,
+                      "congestion": { "code": "RELAXED", "desc": "여유" },
+                      "last": false
+                    },
+                    {
+                      "status": "RUNNING",
+                      "plateNo": "서울74사9790",
+                      "lowFloor": true,
+                      "remainingTime": 323,
+                      "remainingStop": 4,
+                      "remainingSeat": null,
+                      "congestion": { "code": "RELAXED", "desc": "여유" },
+                      "last": false
+                    }
+                  ]
+                },
+                {
+                  "status": "RUNNING",
+                  "stationId": 117263,
+                  "routeId": 988,
+                  "items": [
+                    {
+                      "status": "RUNNING",
+                      "plateNo": "서울74사5428",
+                      "lowFloor": false,
+                      "remainingTime": 56,
+                      "remainingStop": 1,
+                      "remainingSeat": null,
+                      "congestion": { "code": "RELAXED", "desc": "여유" },
+                      "last": false
+                    },
+                    {
+                      "status": "RUNNING",
+                      "plateNo": "서울74사2428",
+                      "lowFloor": true,
+                      "remainingTime": 763,
+                      "remainingStop": 7,
+                      "remainingSeat": null,
+                      "congestion": { "code": "NORMAL", "desc": "보통" },
+                      "last": false
+                    }
+                  ]
+                },
+                {
+                  "status": "RUNNING",
+                  "stationId": 117263,
+                  "routeId": 1447,
+                  "items": [
+                    {
+                      "status": "RUNNING",
+                      "plateNo": "서울74사7053",
+                      "lowFloor": true,
+                      "remainingTime": 773,
+                      "remainingStop": 7,
+                      "remainingSeat": null,
+                      "congestion": { "code": "RELAXED", "desc": "여유" },
+                      "last": false
+                    },
+                    {
+                      "status": "RUNNING",
+                      "plateNo": "서울74사6932",
+                      "lowFloor": false,
+                      "remainingTime": 1814,
+                      "remainingStop": 14,
+                      "remainingSeat": null,
+                      "congestion": { "code": "RELAXED", "desc": "여유" },
+                      "last": false
+                    }
+                  ]
+                }
+              ],
+              "points": [
+                { "x": 127.066658, "y": 37.5913887 },
+                { "x": 127.0671082, "y": 37.5915184 },
+                { "x": 127.0680466, "y": 37.5917816 },
+                { "x": 127.0695572, "y": 37.5922394 },
+                { "x": 127.0711823, "y": 37.5926971 },
+                { "x": 127.0730133, "y": 37.5931282 },
+                { "x": 127.0742035, "y": 37.5934715 },
+                { "x": 127.0748978, "y": 37.5936699 },
+                { "x": 127.0748978, "y": 37.5936699 },
+                { "x": 127.0762024, "y": 37.5939064 },
+                { "x": 127.0814514, "y": 37.5952721 },
+                { "x": 127.0824966, "y": 37.5955353 },
+                { "x": 127.082756, "y": 37.5956039 },
+                { "x": 127.082756, "y": 37.5956039 }
+              ],
+              "walkpath": null,
+              "shutdown": false,
+              "lastTrip": false,
+              "firstTrip": false,
+              "departureCity": null,
+              "stationIdAsOptional": null
+            },
+            {
+              "type": "WALKING",
+              "instruction": "도보 307m",
+              "info": { "walk": "도보 307m", "etc": null, "subway": null },
+              "departureTime": "2022-05-20T23:37:59",
+              "arrivalTime": "2022-05-20T23:45:46",
+              "alarmTime": {
+                "alarmDepartureTime": null,
+                "alarmArrivalTime": null
+              },
+              "distance": 307,
+              "duration": 8,
+              "tripIdx": null,
+              "headsign": null,
+              "wayType": null,
+              "routes": [],
+              "stations": [],
+              "arrivals": [],
+              "points": [
+                { "x": 127.082756, "y": 37.5956039 },
+                { "x": 127.0856709, "y": 37.5959203 }
+              ],
+              "walkpath": {
+                "legs": [
+                  {
+                    "steps": [
+                      {
+                        "cross": null,
+                        "distance": 0,
+                        "duration": 0,
+                        "eye": [127.0827622, 37.5955824],
+                        "junc": null,
+                        "lat": 37.5955824,
+                        "lng": 127.0827622,
+                        "lookAt": [127.0828696, 37.5956098],
+                        "path": null,
+                        "poi": null,
+                        "road": null,
+                        "turn": 14,
+                        "turnDesc": "상봉역.중랑우체국",
+                        "turnInfo": null,
+                        "upwa": null
+                      },
+                      {
+                        "cross": null,
+                        "distance": 69,
+                        "duration": 119,
+                        "eye": [127.0827622, 37.5955824],
+                        "junc": null,
+                        "lat": 37.5955824,
+                        "lng": 127.0827622,
+                        "lookAt": [127.0828696, 37.5956098],
+                        "path": "127.0827622,37.5955824 127.0835110,37.5957744",
+                        "poi": null,
+                        "road": null,
+                        "turn": 1,
+                        "turnDesc": "직진",
+                        "turnInfo": null,
+                        "upwa": null
+                      },
+                      {
+                        "cross": null,
+                        "distance": 10,
+                        "duration": 9,
+                        "eye": [127.0833481, 37.5957323],
+                        "junc": null,
+                        "lat": 37.5957744,
+                        "lng": 127.083511,
+                        "lookAt": [127.0835534, 37.5956907],
+                        "path": "127.0835110,37.5957744 127.0835432,37.5956879",
+                        "poi": null,
+                        "road": "망우로",
+                        "turn": 8,
+                        "turnDesc": "지센 상봉점 방면으로 횡단보도 건너기",
+                        "turnInfo": null,
+                        "upwa": null
+                      },
+                      {
+                        "cross": null,
+                        "distance": 144,
+                        "duration": 137,
+                        "eye": [127.0834454, 37.595757],
+                        "junc": null,
+                        "lat": 37.5956879,
+                        "lng": 127.0835432,
+                        "lookAt": [127.0836507, 37.5957172],
+                        "path": "127.0835432,37.5956879 127.0840522,37.5958285 127.0850975,37.5960837",
+                        "poi": null,
+                        "road": null,
+                        "turn": 2,
+                        "turnDesc": "왼쪽 방향",
+                        "turnInfo": null,
+                        "upwa": null
+                      },
+                      {
+                        "cross": null,
+                        "distance": 83,
+                        "duration": 200,
+                        "eye": [127.0849334, 37.5960435],
+                        "junc": null,
+                        "lat": 37.5960837,
+                        "lng": 127.0850975,
+                        "lookAt": [127.0851901, 37.59613],
+                        "path": "127.0850975,37.5960837 127.0851155,37.5961099 127.0855894,37.5962368 127.0856659,37.5959171",
+                        "poi": null,
+                        "road": null,
+                        "turn": 12,
+                        "turnDesc": "상봉역(시외버스터미널) 5번 출구",
+                        "turnInfo": null,
+                        "upwa": {
+                          "from": {
+                            "exit": "5",
+                            "name": "상봉역(시외버스터미널)"
+                          },
+                          "to": null
+                        }
+                      },
+                      {
+                        "cross": null,
+                        "distance": 0,
+                        "duration": 0,
+                        "eye": [127.0856335, 37.5960495],
+                        "junc": null,
+                        "lat": 37.5959171,
+                        "lng": 127.0856659,
+                        "lookAt": [127.0856659, 37.5959171],
+                        "path": null,
+                        "poi": null,
+                        "road": null,
+                        "turn": 15,
+                        "turnDesc": "도착",
+                        "turnInfo": "도로의 오른쪽에 있습니다.",
+                        "upwa": null
+                      }
+                    ],
+                    "summary": { "distance": 307, "duration": 467 }
+                  }
+                ],
+                "summary": {
+                  "bound": [
+                    [127.0827622, 37.5955824],
+                    [127.0856659, 37.5962368]
+                  ],
+                  "crosswalk": 1,
+                  "distance": 307,
+                  "dupOptions": [],
+                  "duration": 467,
+                  "facilityDesc": null,
+                  "option": "reco",
+                  "overpass": 0,
+                  "stair": 1,
+                  "stepCount": 479,
+                  "underpass": 1,
+                  "ways": [
+                    {
+                      "lat": 37.5955824,
+                      "lng": 127.0827622,
+                      "multiEntrance": false,
+                      "name": "상봉역.중랑우체국"
+                    },
+                    {
+                      "lat": 37.5959171,
+                      "lng": 127.0856659,
+                      "multiEntrance": false,
+                      "name": "도착"
+                    }
+                  ]
+                }
+              },
+              "shutdown": false,
+              "lastTrip": false,
+              "firstTrip": false,
+              "departureCity": null,
+              "stationIdAsOptional": null
+            }
+          ]
+        }
+      ],
+      "transferCount": 1,
+      "directionsType": "CITY",
+      "pathLabels": [],
+      "vehicleTypes": ["BUS"]
+    },
+    {
+      "idx": 3,
+      "mode": "TIME",
+      "type": "BUS",
+      "optimizationMethod": "RECOMMEND",
+      "labels": [],
+      "departureTime": "2022-05-20T22:55:26",
+      "arrivalTime": "2022-05-20T23:42:41",
+      "alarmDepartureTime": null,
+      "alarmArrivalTime": null,
+      "duration": 47,
+      "intercityDuration": 0,
+      "walkingDuration": 21,
+      "waitingDuration": 0,
+      "distance": 8870,
+      "shutdown": false,
+      "fare": 1200,
+      "fares": [
+        {
+          "routes": [
+            [
+              {
+                "id": 875,
+                "name": "146",
+                "longName": "146",
+                "type": {
+                  "id": 11,
+                  "name": "간선",
+                  "shortName": "간선",
+                  "iconName": "간선",
+                  "color": "#386de8"
+                },
+                "realtime": true,
+                "useInterval": true,
+                "operationType": "일반",
+                "operation": {
+                  "type": "NORMAL",
+                  "name": "일반",
+                  "shortName": "일"
+                },
+                "color": null,
+                "platform": null,
+                "headsign": null,
+                "busInterval": null,
+                "flag": null
+              }
+            ]
+          ],
+          "fare": 1200,
+          "tripIdx": 170380
+        }
+      ],
+      "legs": [
+        {
+          "steps": [
+            {
+              "type": "WALKING",
+              "instruction": "도보 133m",
+              "info": { "walk": "도보 133m", "etc": null, "subway": null },
+              "departureTime": "2022-05-20T22:55:26",
+              "arrivalTime": "2022-05-20T22:58:12",
+              "alarmTime": {
+                "alarmDepartureTime": null,
+                "alarmArrivalTime": null
+              },
+              "distance": 133,
+              "duration": 3,
+              "tripIdx": null,
+              "headsign": null,
+              "wayType": null,
+              "routes": [],
+              "stations": [],
+              "arrivals": [],
+              "points": [
+                { "x": 127.0576351, "y": 37.6653828 },
+                { "x": 127.0574188, "y": 37.6653976 }
+              ],
+              "walkpath": {
+                "legs": [
+                  {
+                    "steps": [
+                      {
+                        "cross": null,
+                        "distance": 0,
+                        "duration": 0,
+                        "eye": [127.0576347, 37.6653817],
+                        "junc": null,
+                        "lat": 37.6653817,
+                        "lng": 127.0576347,
+                        "lookAt": [127.0576579, 37.6652917],
+                        "path": null,
+                        "poi": null,
+                        "road": null,
+                        "turn": 14,
+                        "turnDesc": "출발",
+                        "turnInfo": null,
+                        "upwa": null
+                      },
+                      {
+                        "cross": null,
+                        "distance": 89,
+                        "duration": 126,
+                        "eye": [127.0576347, 37.6653817],
+                        "junc": null,
+                        "lat": 37.6653817,
+                        "lng": 127.0576347,
+                        "lookAt": [127.0576579, 37.6652917],
+                        "path": "127.0576347,37.6653817 127.0577634,37.6648901 127.0575879,37.6648615 127.0575577,37.6649767 127.0575303,37.6650073",
+                        "poi": null,
+                        "road": "동일로",
+                        "turn": 12,
+                        "turnDesc": "마들역 6번 출구",
+                        "turnInfo": null,
+                        "upwa": {
+                          "from": null,
+                          "to": { "exit": "6", "name": "마들역" }
+                        }
+                      },
+                      {
+                        "cross": null,
+                        "distance": 44,
+                        "duration": 39,
+                        "eye": [127.0575832, 37.6648786],
+                        "junc": null,
+                        "lat": 37.6650073,
+                        "lng": 127.0575303,
+                        "lookAt": [127.0575071, 37.6650955],
+                        "path": "127.0575303,37.6650073 127.0574282,37.6653972",
+                        "poi": null,
+                        "road": null,
+                        "turn": 1,
+                        "turnDesc": "직진",
+                        "turnInfo": null,
+                        "upwa": null
+                      },
+                      {
+                        "cross": null,
+                        "distance": 0,
+                        "duration": 0,
+                        "eye": [127.057463, 37.6652639],
+                        "junc": null,
+                        "lat": 37.6653972,
+                        "lng": 127.0574282,
+                        "lookAt": [127.0574282, 37.6653972],
+                        "path": null,
+                        "poi": null,
+                        "road": null,
+                        "turn": 15,
+                        "turnDesc": "상계주공11단지",
+                        "turnInfo": "도로의 왼쪽에 있습니다.",
+                        "upwa": null
+                      }
+                    ],
+                    "summary": { "distance": 133, "duration": 166 }
+                  }
+                ],
+                "summary": {
+                  "bound": [
+                    [127.0574282, 37.6648615],
+                    [127.0577634, 37.6653972]
+                  ],
+                  "crosswalk": 0,
+                  "distance": 133,
+                  "dupOptions": [],
+                  "duration": 166,
+                  "facilityDesc": null,
+                  "option": "reco",
+                  "overpass": 0,
+                  "stair": 0,
+                  "stepCount": 208,
+                  "underpass": 1,
+                  "ways": [
+                    {
+                      "lat": 37.6653817,
+                      "lng": 127.0576347,
+                      "multiEntrance": false,
+                      "name": "출발"
+                    },
+                    {
+                      "lat": 37.6653972,
+                      "lng": 127.0574282,
+                      "multiEntrance": false,
+                      "name": "상계주공11단지"
+                    }
+                  ]
+                }
+              },
+              "shutdown": false,
+              "lastTrip": false,
+              "firstTrip": false,
+              "departureCity": null,
+              "stationIdAsOptional": null
+            },
+            {
+              "type": "BUS",
+              "instruction": "버스 승차",
+              "info": { "walk": null, "etc": "버스 승차", "subway": null },
+              "departureTime": "2022-05-20T22:58:12",
+              "arrivalTime": "2022-05-20T23:25:02",
+              "alarmTime": {
+                "alarmDepartureTime": null,
+                "alarmArrivalTime": null
+              },
+              "distance": 7686,
+              "duration": 27,
+              "tripIdx": 170380,
+              "headsign": null,
+              "wayType": "DOWN",
+              "routes": [
+                {
+                  "id": 875,
+                  "name": "146",
+                  "longName": "146",
+                  "type": {
+                    "id": 11,
+                    "name": "간선",
+                    "shortName": "간선",
+                    "iconName": "간선",
+                    "color": "#386de8"
+                  },
+                  "realtime": true,
+                  "useInterval": true,
+                  "operationType": "일반",
+                  "operation": {
+                    "type": "NORMAL",
+                    "name": "일반",
+                    "shortName": "일"
+                  },
+                  "color": null,
+                  "platform": null,
+                  "headsign": null,
+                  "busInterval": {
+                    "message": { "date": "매일", "intervalCount": "8분" }
+                  },
+                  "flag": null
+                }
+              ],
+              "stations": [
+                {
+                  "id": 107594,
+                  "placeId": null,
+                  "name": "상계주공11단지",
+                  "longName": null,
+                  "displayName": "상계주공11단지",
+                  "displayCode": "11268",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 107632,
+                  "placeId": null,
+                  "name": "상계주공10단지",
+                  "longName": null,
+                  "displayName": "상계주공10단지",
+                  "displayCode": "11269",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 107647,
+                  "placeId": null,
+                  "name": "대림아파트상가",
+                  "longName": null,
+                  "displayName": "대림아파트상가",
+                  "displayCode": "11184",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 107682,
+                  "placeId": null,
+                  "name": "도봉면허시험장",
+                  "longName": null,
+                  "displayName": "도봉면허시험장",
+                  "displayCode": "11186",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 107727,
+                  "placeId": null,
+                  "name": "상계주공3단지",
+                  "longName": null,
+                  "displayName": "상계주공3단지",
+                  "displayCode": "11244",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 107752,
+                  "placeId": null,
+                  "name": "상계주공2단지",
+                  "longName": null,
+                  "displayName": "상계주공2단지",
+                  "displayCode": "11245",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 107818,
+                  "placeId": null,
+                  "name": "상계주공1단지",
+                  "longName": null,
+                  "displayName": "상계주공1단지",
+                  "displayCode": "11246",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 107870,
+                  "placeId": null,
+                  "name": "중계역",
+                  "longName": null,
+                  "displayName": "중계역",
+                  "displayCode": "11366",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 107935,
+                  "placeId": null,
+                  "name": "노원구민의전당",
+                  "longName": null,
+                  "displayName": "노원구민의전당",
+                  "displayCode": "11367",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 107986,
+                  "placeId": null,
+                  "name": "하계역",
+                  "longName": null,
+                  "displayName": "하계역",
+                  "displayCode": "11447",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 108044,
+                  "placeId": null,
+                  "name": "하계장미아파트",
+                  "longName": null,
+                  "displayName": "하계장미아파트",
+                  "displayCode": "11448",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 108148,
+                  "placeId": null,
+                  "name": "서울과학기술대입구",
+                  "longName": null,
+                  "displayName": "서울과학기술대입구",
+                  "displayCode": "11160",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 108192,
+                  "placeId": null,
+                  "name": "공릉역4번출구",
+                  "longName": null,
+                  "displayName": "공릉역4번출구",
+                  "displayCode": "11162",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 111457,
+                  "placeId": null,
+                  "name": "공릉시장",
+                  "longName": null,
+                  "displayName": "공릉시장",
+                  "displayCode": "11102",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 108265,
+                  "placeId": null,
+                  "name": "태릉입구역3번출구",
+                  "longName": null,
+                  "displayName": "태릉입구역3번출구",
+                  "displayCode": "11104",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 108324,
+                  "placeId": null,
+                  "name": "극동늘푸른아파트",
+                  "longName": null,
+                  "displayName": "극동늘푸른아파트",
+                  "displayCode": "07101",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 108353,
+                  "placeId": null,
+                  "name": "묵동삼거리.먹골역",
+                  "longName": null,
+                  "displayName": "묵동삼거리.먹골역",
+                  "displayCode": "07103",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 151565,
+                  "placeId": null,
+                  "name": "먹골역",
+                  "longName": null,
+                  "displayName": "먹골역",
+                  "displayCode": "07425",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 108389,
+                  "placeId": null,
+                  "name": "한국전력동부지사",
+                  "longName": null,
+                  "displayName": "한국전력동부지사",
+                  "displayCode": "07105",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 108414,
+                  "placeId": null,
+                  "name": "지하철7호선중화역",
+                  "longName": null,
+                  "displayName": "지하철7호선중화역",
+                  "displayCode": "07107",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 108445,
+                  "placeId": null,
+                  "name": "국민은행중화동지점",
+                  "longName": null,
+                  "displayName": "국민은행중화동지점",
+                  "displayCode": "07109",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                }
+              ],
+              "arrivals": [
+                {
+                  "status": "RUNNING",
+                  "stationId": 107594,
+                  "routeId": 875,
+                  "items": [
+                    {
+                      "status": "RUNNING",
+                      "plateNo": "서울75사1564",
+                      "lowFloor": true,
+                      "remainingTime": 571,
+                      "remainingStop": 9,
+                      "remainingSeat": null,
+                      "congestion": { "code": "RELAXED", "desc": "여유" },
+                      "last": false
+                    },
+                    {
+                      "status": "RUNNING",
+                      "plateNo": "서울74사3560",
+                      "lowFloor": true,
+                      "remainingTime": 1140,
+                      "remainingStop": 14,
+                      "remainingSeat": null,
+                      "congestion": { "code": "RELAXED", "desc": "여유" },
+                      "last": false
+                    }
+                  ]
+                }
+              ],
+              "points": [
+                { "x": 127.0574188, "y": 37.6653976 },
+                { "x": 127.0576248, "y": 37.6645775 },
+                { "x": 127.0581894, "y": 37.6623764 },
+                { "x": 127.0581894, "y": 37.6623764 },
+                { "x": 127.0587234, "y": 37.6603699 },
+                { "x": 127.0587234, "y": 37.6603699 },
+                { "x": 127.0595932, "y": 37.6573067 },
+                { "x": 127.0595932, "y": 37.6573067 },
+                { "x": 127.0610199, "y": 37.6520004 },
+                { "x": 127.0610199, "y": 37.6520004 },
+                { "x": 127.0612335, "y": 37.6512489 },
+                { "x": 127.0617294, "y": 37.649437 },
+                { "x": 127.0617294, "y": 37.649437 },
+                { "x": 127.0618515, "y": 37.6490822 },
+                { "x": 127.0620193, "y": 37.6487961 },
+                { "x": 127.062233, "y": 37.6483765 },
+                { "x": 127.0625839, "y": 37.6476517 },
+                { "x": 127.0625839, "y": 37.6476517 },
+                { "x": 127.0633011, "y": 37.6463203 },
+                { "x": 127.0633316, "y": 37.6461334 },
+                { "x": 127.0635452, "y": 37.6456947 },
+                { "x": 127.064064, "y": 37.6447067 },
+                { "x": 127.0643158, "y": 37.6441193 },
+                { "x": 127.0643158, "y": 37.6441193 },
+                { "x": 127.0648193, "y": 37.6430931 },
+                { "x": 127.0657883, "y": 37.640934 },
+                { "x": 127.0664673, "y": 37.6393738 },
+                { "x": 127.0664673, "y": 37.6393738 },
+                { "x": 127.0667343, "y": 37.6388245 },
+                { "x": 127.0670319, "y": 37.6381569 },
+                { "x": 127.0673752, "y": 37.63731 },
+                { "x": 127.0676117, "y": 37.6367073 },
+                { "x": 127.0676117, "y": 37.6367073 },
+                { "x": 127.0681152, "y": 37.6356125 },
+                { "x": 127.068779, "y": 37.6342201 },
+                { "x": 127.068779, "y": 37.6342201 },
+                { "x": 127.0690689, "y": 37.6335754 },
+                { "x": 127.0695114, "y": 37.6329002 },
+                { "x": 127.070816, "y": 37.6299629 },
+                { "x": 127.0709457, "y": 37.6293907 },
+                { "x": 127.0714188, "y": 37.6283684 },
+                { "x": 127.0714188, "y": 37.6283684 },
+                { "x": 127.0719757, "y": 37.6273155 },
+                { "x": 127.072319, "y": 37.6266136 },
+                { "x": 127.072319, "y": 37.6266136 },
+                { "x": 127.072731, "y": 37.6257668 },
+                { "x": 127.0729446, "y": 37.6252441 },
+                { "x": 127.0737457, "y": 37.6227722 },
+                { "x": 127.0737457, "y": 37.6227722 },
+                { "x": 127.074295, "y": 37.6211395 },
+                { "x": 127.074852, "y": 37.6194115 },
+                { "x": 127.074852, "y": 37.6194115 },
+                { "x": 127.0758743, "y": 37.6163673 },
+                { "x": 127.0764084, "y": 37.6146584 },
+                { "x": 127.0764084, "y": 37.6146584 },
+                { "x": 127.0770874, "y": 37.6125793 },
+                { "x": 127.0770874, "y": 37.6125793 },
+                { "x": 127.07724, "y": 37.612133 },
+                { "x": 127.0773239, "y": 37.611824 },
+                { "x": 127.077858, "y": 37.6089935 },
+                { "x": 127.077858, "y": 37.6089935 },
+                { "x": 127.0782089, "y": 37.6071396 },
+                { "x": 127.0782089, "y": 37.6071396 },
+                { "x": 127.0783157, "y": 37.6066818 },
+                { "x": 127.078743, "y": 37.6044426 },
+                { "x": 127.0790787, "y": 37.6026382 },
+                { "x": 127.0790787, "y": 37.6026382 },
+                { "x": 127.0792999, "y": 37.6014442 },
+                { "x": 127.0798187, "y": 37.5988159 },
+                { "x": 127.0798187, "y": 37.5988159 }
+              ],
+              "walkpath": null,
+              "shutdown": false,
+              "lastTrip": false,
+              "firstTrip": false,
+              "departureCity": null,
+              "stationIdAsOptional": null
+            },
+            {
+              "type": "WALKING",
+              "instruction": "도보 1.1km",
+              "info": { "walk": "도보 1.1km", "etc": null, "subway": null },
+              "departureTime": "2022-05-20T23:25:02",
+              "arrivalTime": "2022-05-20T23:42:41",
+              "alarmTime": {
+                "alarmDepartureTime": null,
+                "alarmArrivalTime": null
+              },
+              "distance": 1051,
+              "duration": 18,
+              "tripIdx": null,
+              "headsign": null,
+              "wayType": null,
+              "routes": [],
+              "stations": [],
+              "arrivals": [],
+              "points": [
+                { "x": 127.0798187, "y": 37.5988159 },
+                { "x": 127.0856709, "y": 37.5959203 }
+              ],
+              "walkpath": {
+                "legs": [
+                  {
+                    "steps": [
+                      {
+                        "cross": null,
+                        "distance": 0,
+                        "duration": 0,
+                        "eye": [127.0798384, 37.5988187],
+                        "junc": null,
+                        "lat": 37.5988187,
+                        "lng": 127.0798384,
+                        "lookAt": [127.0798548, 37.5987232],
+                        "path": null,
+                        "poi": null,
+                        "road": null,
+                        "turn": 14,
+                        "turnDesc": "국민은행중화동지점",
+                        "turnInfo": null,
+                        "upwa": null
+                      },
+                      {
+                        "cross": null,
+                        "distance": 417,
+                        "duration": 430,
+                        "eye": [127.0798384, 37.5988187],
+                        "junc": null,
+                        "lat": 37.5988187,
+                        "lng": 127.0798384,
+                        "lookAt": [127.0798548, 37.5987232],
+                        "path": "127.0798384,37.5988187 127.0798618,37.5986854 127.0799560,37.5982549 127.0799815,37.5981423 127.0800001,37.5980639 127.0800571,37.5978037 127.0800779,37.5977199 127.0801120,37.5975046 127.0801592,37.5971650 127.0801720,37.5971028 127.0801703,37.5970145 127.0801624,37.5963916 127.0801626,37.5963520 127.0801586,37.5962618 127.0801524,37.5959562 127.0801337,37.5956659 127.0800758,37.5952755 127.0800394,37.5950969",
+                        "poi": null,
+                        "road": null,
+                        "turn": 1,
+                        "turnDesc": "동일로지하차도까지 직진",
+                        "turnInfo": null,
+                        "upwa": null
+                      },
+                      {
+                        "cross": null,
+                        "distance": 42,
+                        "duration": 37,
+                        "eye": [127.0800659, 37.5952304],
+                        "junc": null,
+                        "lat": 37.5950969,
+                        "lng": 127.0800394,
+                        "lookAt": [127.0801492, 37.5951234],
+                        "path": "127.0800394,37.5950969 127.0801933,37.5951344 127.0804309,37.5951884 127.0804965,37.5952048",
+                        "poi": null,
+                        "road": "망우로",
+                        "turn": 8,
+                        "turnDesc": "한샘교회 방면으로 횡단보도 건너기",
+                        "turnInfo": null,
+                        "upwa": null
+                      },
+                      {
+                        "cross": null,
+                        "distance": 496,
+                        "duration": 466,
+                        "eye": [127.080329, 37.5951646],
+                        "junc": null,
+                        "lat": 37.5952048,
+                        "lng": 127.0804965,
+                        "lookAt": [127.0806141, 37.5952332],
+                        "path": "127.0804965,37.5952048 127.0805338,37.5952140 127.0805677,37.5952222 127.0807306,37.5952616 127.0812397,37.5953832 127.0813268,37.5954061 127.0824353,37.5956957 127.0826106,37.5957405 127.0832011,37.5958913 127.0833538,37.5959306 127.0834432,37.5959535 127.0840133,37.5960925 127.0850019,37.5963709 127.0850821,37.5963955 127.0852450,37.5964393 127.0854520,37.5964969 127.0858400,37.5965974",
+                        "poi": null,
+                        "road": null,
+                        "turn": 1,
+                        "turnDesc": "상봉역(시외버스터미널)까지 직진",
+                        "turnInfo": null,
+                        "upwa": null
+                      },
+                      {
+                        "cross": null,
+                        "distance": 96,
+                        "duration": 124,
+                        "eye": [127.0856737, 37.5965535],
+                        "junc": null,
+                        "lat": 37.5965974,
+                        "lng": 127.08584,
+                        "lookAt": [127.0857361, 37.5965492],
+                        "path": "127.0858400,37.5965974 127.0857926,37.5965629 127.0855222,37.5964971 127.0855894,37.5962368 127.0856659,37.5959171",
+                        "poi": null,
+                        "road": null,
+                        "turn": 12,
+                        "turnDesc": "상봉역(시외버스터미널) 1번 출구",
+                        "turnInfo": null,
+                        "upwa": {
+                          "from": {
+                            "exit": "1",
+                            "name": "상봉역(시외버스터미널)"
+                          },
+                          "to": null
+                        }
+                      },
+                      {
+                        "cross": null,
+                        "distance": 0,
+                        "duration": 0,
+                        "eye": [127.0856335, 37.5960495],
+                        "junc": null,
+                        "lat": 37.5959171,
+                        "lng": 127.0856659,
+                        "lookAt": [127.0856659, 37.5959171],
+                        "path": null,
+                        "poi": null,
+                        "road": null,
+                        "turn": 15,
+                        "turnDesc": "도착",
+                        "turnInfo": "도로의 오른쪽에 있습니다.",
+                        "upwa": null
+                      }
+                    ],
+                    "summary": { "distance": 1051, "duration": 1059 }
+                  }
+                ],
+                "summary": {
+                  "bound": [
+                    [127.0798384, 37.5950969],
+                    [127.08584, 37.5988187]
+                  ],
+                  "crosswalk": 1,
+                  "distance": 1051,
+                  "dupOptions": [],
+                  "duration": 1059,
+                  "facilityDesc": null,
+                  "option": "reco",
+                  "overpass": 0,
+                  "stair": 0,
+                  "stepCount": 1642,
+                  "underpass": 1,
+                  "ways": [
+                    {
+                      "lat": 37.5988187,
+                      "lng": 127.0798384,
+                      "multiEntrance": false,
+                      "name": "국민은행중화동지점"
+                    },
+                    {
+                      "lat": 37.5959171,
+                      "lng": 127.0856659,
+                      "multiEntrance": false,
+                      "name": "도착"
+                    }
+                  ]
+                }
+              },
+              "shutdown": false,
+              "lastTrip": false,
+              "firstTrip": false,
+              "departureCity": null,
+              "stationIdAsOptional": null
+            }
+          ]
+        }
+      ],
+      "transferCount": 0,
+      "directionsType": "CITY",
+      "pathLabels": [],
+      "vehicleTypes": ["BUS"]
+    },
+    {
+      "idx": 4,
+      "mode": "TIME",
+      "type": "BUS",
+      "optimizationMethod": "RECOMMEND",
+      "labels": [],
+      "departureTime": "2022-05-20T22:51:34",
+      "arrivalTime": "2022-05-20T23:44:24",
+      "alarmDepartureTime": null,
+      "alarmArrivalTime": null,
+      "duration": 53,
+      "intercityDuration": 0,
+      "walkingDuration": 29,
+      "waitingDuration": 0,
+      "distance": 8785,
+      "shutdown": false,
+      "fare": 1200,
+      "fares": [
+        {
+          "routes": [
+            [
+              {
+                "id": 772,
+                "name": "105",
+                "longName": "105",
+                "type": {
+                  "id": 11,
+                  "name": "간선",
+                  "shortName": "간선",
+                  "iconName": "간선",
+                  "color": "#386de8"
+                },
+                "realtime": true,
+                "useInterval": true,
+                "operationType": "일반",
+                "operation": {
+                  "type": "NORMAL",
+                  "name": "일반",
+                  "shortName": "일"
+                },
+                "color": null,
+                "platform": null,
+                "headsign": null,
+                "busInterval": null,
+                "flag": null
+              },
+              {
+                "id": 875,
+                "name": "146",
+                "longName": "146",
+                "type": {
+                  "id": 11,
+                  "name": "간선",
+                  "shortName": "간선",
+                  "iconName": "간선",
+                  "color": "#386de8"
+                },
+                "realtime": true,
+                "useInterval": true,
+                "operationType": "일반",
+                "operation": {
+                  "type": "NORMAL",
+                  "name": "일반",
+                  "shortName": "일"
+                },
+                "color": null,
+                "platform": null,
+                "headsign": null,
+                "busInterval": null,
+                "flag": null
+              }
+            ]
+          ],
+          "fare": 1200,
+          "tripIdx": 170369
+        }
+      ],
+      "legs": [
+        {
+          "steps": [
+            {
+              "type": "WALKING",
+              "instruction": "도보 619m",
+              "info": { "walk": "도보 619m", "etc": null, "subway": null },
+              "departureTime": "2022-05-20T22:51:34",
+              "arrivalTime": "2022-05-20T23:02:25",
+              "alarmTime": {
+                "alarmDepartureTime": null,
+                "alarmArrivalTime": null
+              },
+              "distance": 619,
+              "duration": 11,
+              "tripIdx": null,
+              "headsign": null,
+              "wayType": null,
+              "routes": [],
+              "stations": [],
+              "arrivals": [],
+              "points": [
+                { "x": 127.0576351, "y": 37.6653828 },
+                { "x": 127.0587234, "y": 37.6603699 }
+              ],
+              "walkpath": {
+                "legs": [
+                  {
+                    "steps": [
+                      {
+                        "cross": null,
+                        "distance": 0,
+                        "duration": 0,
+                        "eye": [127.0576347, 37.6653817],
+                        "junc": null,
+                        "lat": 37.6653817,
+                        "lng": 127.0576347,
+                        "lookAt": [127.0576579, 37.6652917],
+                        "path": null,
+                        "poi": null,
+                        "road": null,
+                        "turn": 14,
+                        "turnDesc": "출발",
+                        "turnInfo": null,
+                        "upwa": null
+                      },
+                      {
+                        "cross": null,
+                        "distance": 141,
+                        "duration": 165,
+                        "eye": [127.0576347, 37.6653817],
+                        "junc": null,
+                        "lat": 37.6653817,
+                        "lng": 127.0576347,
+                        "lookAt": [127.0576579, 37.6652917],
+                        "path": "127.0576347,37.6653817 127.0577634,37.6648901 127.0578319,37.6646307 127.0579791,37.6646547 127.0580475,37.6644053 127.0580730,37.6643108 127.0580630,37.6642819",
+                        "poi": null,
+                        "road": "동일로",
+                        "turn": 12,
+                        "turnDesc": "마들역 4번 출구",
+                        "turnInfo": null,
+                        "upwa": {
+                          "from": null,
+                          "to": { "exit": "4", "name": "마들역" }
+                        }
+                      },
+                      {
+                        "cross": null,
+                        "distance": 322,
+                        "duration": 345,
+                        "eye": [127.0580417, 37.6644224],
+                        "junc": null,
+                        "lat": 37.6642819,
+                        "lng": 127.058063,
+                        "lookAt": [127.0580862, 37.6641927],
+                        "path": "127.0580630,37.6642819 127.0583877,37.6630546 127.0586510,37.6620506 127.0586799,37.6619569 127.0588212,37.6614527",
+                        "poi": null,
+                        "road": null,
+                        "turn": 1,
+                        "turnDesc": "그린동물병원까지 직진",
+                        "turnInfo": null,
+                        "upwa": null
+                      },
+                      {
+                        "cross": null,
+                        "distance": 66,
+                        "duration": 59,
+                        "eye": [127.058783, 37.6615851],
+                        "junc": null,
+                        "lat": 37.6614527,
+                        "lng": 127.0588212,
+                        "lookAt": [127.0587023, 37.661437],
+                        "path": "127.0588212,37.6614527 127.0586207,37.6614267 127.0584463,37.6614009 127.0584350,37.6611890 127.0584287,37.6611088",
+                        "poi": null,
+                        "road": "동일로",
+                        "turn": 8,
+                        "turnDesc": "그린동물병원에서 2개 횡단보도 건너기",
+                        "turnInfo": null,
+                        "upwa": null
+                      },
+                      {
+                        "cross": null,
+                        "distance": 90,
+                        "duration": 80,
+                        "eye": [127.058437, 37.661244],
+                        "junc": null,
+                        "lat": 37.6611088,
+                        "lng": 127.0584287,
+                        "lookAt": [127.058531, 37.6610614],
+                        "path": "127.0584287,37.6611088 127.0584946,37.6610856 127.0585413,37.6610560 127.0585732,37.6610183 127.0585985,37.6609625 127.0587456,37.6604339 127.0587619,37.6603763",
+                        "poi": null,
+                        "road": null,
+                        "turn": 1,
+                        "turnDesc": "직진",
+                        "turnInfo": null,
+                        "upwa": null
+                      },
+                      {
+                        "cross": null,
+                        "distance": 0,
+                        "duration": 0,
+                        "eye": [127.0587225, 37.6605132],
+                        "junc": null,
+                        "lat": 37.6603763,
+                        "lng": 127.0587619,
+                        "lookAt": [127.0587619, 37.6603763],
+                        "path": null,
+                        "poi": null,
+                        "road": null,
+                        "turn": 15,
+                        "turnDesc": "대림아파트상가",
+                        "turnInfo": "도로의 오른쪽에 있습니다.",
+                        "upwa": null
+                      }
+                    ],
+                    "summary": { "distance": 619, "duration": 651 }
+                  }
+                ],
+                "summary": {
+                  "bound": [
+                    [127.0576347, 37.6603763],
+                    [127.0588212, 37.6653817]
+                  ],
+                  "crosswalk": 2,
+                  "distance": 619,
+                  "dupOptions": [],
+                  "duration": 651,
+                  "facilityDesc": null,
+                  "option": "reco",
+                  "overpass": 0,
+                  "stair": 1,
+                  "stepCount": 967,
+                  "underpass": 1,
+                  "ways": [
+                    {
+                      "lat": 37.6653817,
+                      "lng": 127.0576347,
+                      "multiEntrance": false,
+                      "name": "출발"
+                    },
+                    {
+                      "lat": 37.6603763,
+                      "lng": 127.0587619,
+                      "multiEntrance": false,
+                      "name": "대림아파트상가"
+                    }
+                  ]
+                }
+              },
+              "shutdown": false,
+              "lastTrip": false,
+              "firstTrip": false,
+              "departureCity": null,
+              "stationIdAsOptional": null
+            },
+            {
+              "type": "BUS",
+              "instruction": "버스 승차",
+              "info": { "walk": null, "etc": "버스 승차", "subway": null },
+              "departureTime": "2022-05-20T23:02:25",
+              "arrivalTime": "2022-05-20T23:26:45",
+              "alarmTime": {
+                "alarmDepartureTime": null,
+                "alarmArrivalTime": null
+              },
+              "distance": 7115,
+              "duration": 24,
+              "tripIdx": 170369,
+              "headsign": null,
+              "wayType": "DOWN",
+              "routes": [
+                {
+                  "id": 875,
+                  "name": "146",
+                  "longName": "146",
+                  "type": {
+                    "id": 11,
+                    "name": "간선",
+                    "shortName": "간선",
+                    "iconName": "간선",
+                    "color": "#386de8"
+                  },
+                  "realtime": true,
+                  "useInterval": true,
+                  "operationType": "일반",
+                  "operation": {
+                    "type": "NORMAL",
+                    "name": "일반",
+                    "shortName": "일"
+                  },
+                  "color": null,
+                  "platform": null,
+                  "headsign": null,
+                  "busInterval": {
+                    "message": { "date": "매일", "intervalCount": "8분" }
+                  },
+                  "flag": null
+                },
+                {
+                  "id": 772,
+                  "name": "105",
+                  "longName": "105",
+                  "type": {
+                    "id": 11,
+                    "name": "간선",
+                    "shortName": "간선",
+                    "iconName": "간선",
+                    "color": "#386de8"
+                  },
+                  "realtime": true,
+                  "useInterval": true,
+                  "operationType": "일반",
+                  "operation": {
+                    "type": "NORMAL",
+                    "name": "일반",
+                    "shortName": "일"
+                  },
+                  "color": null,
+                  "platform": null,
+                  "headsign": null,
+                  "busInterval": {
+                    "message": { "date": "매일", "intervalCount": "12분" }
+                  },
+                  "flag": null
+                }
+              ],
+              "stations": [
+                {
+                  "id": 107647,
+                  "placeId": null,
+                  "name": "대림아파트상가",
+                  "longName": null,
+                  "displayName": "대림아파트상가",
+                  "displayCode": "11184",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 107682,
+                  "placeId": null,
+                  "name": "도봉면허시험장",
+                  "longName": null,
+                  "displayName": "도봉면허시험장",
+                  "displayCode": "11186",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 107727,
+                  "placeId": null,
+                  "name": "상계주공3단지",
+                  "longName": null,
+                  "displayName": "상계주공3단지",
+                  "displayCode": "11244",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 107752,
+                  "placeId": null,
+                  "name": "상계주공2단지",
+                  "longName": null,
+                  "displayName": "상계주공2단지",
+                  "displayCode": "11245",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 107818,
+                  "placeId": null,
+                  "name": "상계주공1단지",
+                  "longName": null,
+                  "displayName": "상계주공1단지",
+                  "displayCode": "11246",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 107870,
+                  "placeId": null,
+                  "name": "중계역",
+                  "longName": null,
+                  "displayName": "중계역",
+                  "displayCode": "11366",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 107935,
+                  "placeId": null,
+                  "name": "노원구민의전당",
+                  "longName": null,
+                  "displayName": "노원구민의전당",
+                  "displayCode": "11367",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 107986,
+                  "placeId": null,
+                  "name": "하계역",
+                  "longName": null,
+                  "displayName": "하계역",
+                  "displayCode": "11447",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 108044,
+                  "placeId": null,
+                  "name": "하계장미아파트",
+                  "longName": null,
+                  "displayName": "하계장미아파트",
+                  "displayCode": "11448",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 108148,
+                  "placeId": null,
+                  "name": "서울과학기술대입구",
+                  "longName": null,
+                  "displayName": "서울과학기술대입구",
+                  "displayCode": "11160",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 108192,
+                  "placeId": null,
+                  "name": "공릉역4번출구",
+                  "longName": null,
+                  "displayName": "공릉역4번출구",
+                  "displayCode": "11162",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 111457,
+                  "placeId": null,
+                  "name": "공릉시장",
+                  "longName": null,
+                  "displayName": "공릉시장",
+                  "displayCode": "11102",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 108265,
+                  "placeId": null,
+                  "name": "태릉입구역3번출구",
+                  "longName": null,
+                  "displayName": "태릉입구역3번출구",
+                  "displayCode": "11104",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 108324,
+                  "placeId": null,
+                  "name": "극동늘푸른아파트",
+                  "longName": null,
+                  "displayName": "극동늘푸른아파트",
+                  "displayCode": "07101",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 108353,
+                  "placeId": null,
+                  "name": "묵동삼거리.먹골역",
+                  "longName": null,
+                  "displayName": "묵동삼거리.먹골역",
+                  "displayCode": "07103",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 151565,
+                  "placeId": null,
+                  "name": "먹골역",
+                  "longName": null,
+                  "displayName": "먹골역",
+                  "displayCode": "07425",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 108389,
+                  "placeId": null,
+                  "name": "한국전력동부지사",
+                  "longName": null,
+                  "displayName": "한국전력동부지사",
+                  "displayCode": "07105",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 108414,
+                  "placeId": null,
+                  "name": "지하철7호선중화역",
+                  "longName": null,
+                  "displayName": "지하철7호선중화역",
+                  "displayCode": "07107",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 108445,
+                  "placeId": null,
+                  "name": "국민은행중화동지점",
+                  "longName": null,
+                  "displayName": "국민은행중화동지점",
+                  "displayCode": "07109",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                }
+              ],
+              "arrivals": [
+                {
+                  "status": "RUNNING",
+                  "stationId": 107647,
+                  "routeId": 875,
+                  "items": [
+                    {
+                      "status": "RUNNING",
+                      "plateNo": "서울75사1564",
+                      "lowFloor": true,
+                      "remainingTime": 694,
+                      "remainingStop": 11,
+                      "remainingSeat": null,
+                      "congestion": { "code": "RELAXED", "desc": "여유" },
+                      "last": false
+                    },
+                    {
+                      "status": "RUNNING",
+                      "plateNo": "서울74사3560",
+                      "lowFloor": true,
+                      "remainingTime": 1224,
+                      "remainingStop": 15,
+                      "remainingSeat": null,
+                      "congestion": { "code": "RELAXED", "desc": "여유" },
+                      "last": false
+                    }
+                  ]
+                }
+              ],
+              "points": [
+                { "x": 127.0587234, "y": 37.6603699 },
+                { "x": 127.0595932, "y": 37.6573067 },
+                { "x": 127.0595932, "y": 37.6573067 },
+                { "x": 127.0610199, "y": 37.6520004 },
+                { "x": 127.0610199, "y": 37.6520004 },
+                { "x": 127.0612335, "y": 37.6512489 },
+                { "x": 127.0617294, "y": 37.649437 },
+                { "x": 127.0617294, "y": 37.649437 },
+                { "x": 127.0618515, "y": 37.6490822 },
+                { "x": 127.0620193, "y": 37.6487961 },
+                { "x": 127.062233, "y": 37.6483765 },
+                { "x": 127.0625839, "y": 37.6476517 },
+                { "x": 127.0625839, "y": 37.6476517 },
+                { "x": 127.0633011, "y": 37.6463203 },
+                { "x": 127.0633316, "y": 37.6461334 },
+                { "x": 127.0635452, "y": 37.6456947 },
+                { "x": 127.064064, "y": 37.6447067 },
+                { "x": 127.0643158, "y": 37.6441193 },
+                { "x": 127.0643158, "y": 37.6441193 },
+                { "x": 127.0648193, "y": 37.6430931 },
+                { "x": 127.0657883, "y": 37.640934 },
+                { "x": 127.0664673, "y": 37.6393738 },
+                { "x": 127.0664673, "y": 37.6393738 },
+                { "x": 127.0667343, "y": 37.6388245 },
+                { "x": 127.0670319, "y": 37.6381569 },
+                { "x": 127.0673752, "y": 37.63731 },
+                { "x": 127.0676117, "y": 37.6367073 },
+                { "x": 127.0676117, "y": 37.6367073 },
+                { "x": 127.0681152, "y": 37.6356125 },
+                { "x": 127.068779, "y": 37.6342201 },
+                { "x": 127.068779, "y": 37.6342201 },
+                { "x": 127.0690689, "y": 37.6335754 },
+                { "x": 127.0695114, "y": 37.6329002 },
+                { "x": 127.070816, "y": 37.6299629 },
+                { "x": 127.0709457, "y": 37.6293907 },
+                { "x": 127.0714188, "y": 37.6283684 },
+                { "x": 127.0714188, "y": 37.6283684 },
+                { "x": 127.0719757, "y": 37.6273155 },
+                { "x": 127.072319, "y": 37.6266136 },
+                { "x": 127.072319, "y": 37.6266136 },
+                { "x": 127.072731, "y": 37.6257668 },
+                { "x": 127.0729446, "y": 37.6252441 },
+                { "x": 127.0737457, "y": 37.6227722 },
+                { "x": 127.0737457, "y": 37.6227722 },
+                { "x": 127.074295, "y": 37.6211395 },
+                { "x": 127.074852, "y": 37.6194115 },
+                { "x": 127.074852, "y": 37.6194115 },
+                { "x": 127.0758743, "y": 37.6163673 },
+                { "x": 127.0764084, "y": 37.6146584 },
+                { "x": 127.0764084, "y": 37.6146584 },
+                { "x": 127.0770874, "y": 37.6125793 },
+                { "x": 127.0770874, "y": 37.6125793 },
+                { "x": 127.07724, "y": 37.612133 },
+                { "x": 127.0773239, "y": 37.611824 },
+                { "x": 127.077858, "y": 37.6089935 },
+                { "x": 127.077858, "y": 37.6089935 },
+                { "x": 127.0782089, "y": 37.6071396 },
+                { "x": 127.0782089, "y": 37.6071396 },
+                { "x": 127.0783157, "y": 37.6066818 },
+                { "x": 127.078743, "y": 37.6044426 },
+                { "x": 127.0790787, "y": 37.6026382 },
+                { "x": 127.0790787, "y": 37.6026382 },
+                { "x": 127.0792999, "y": 37.6014442 },
+                { "x": 127.0798187, "y": 37.5988159 },
+                { "x": 127.0798187, "y": 37.5988159 }
+              ],
+              "walkpath": null,
+              "shutdown": false,
+              "lastTrip": false,
+              "firstTrip": false,
+              "departureCity": null,
+              "stationIdAsOptional": null
+            },
+            {
+              "type": "WALKING",
+              "instruction": "도보 1.1km",
+              "info": { "walk": "도보 1.1km", "etc": null, "subway": null },
+              "departureTime": "2022-05-20T23:26:45",
+              "arrivalTime": "2022-05-20T23:44:24",
+              "alarmTime": {
+                "alarmDepartureTime": null,
+                "alarmArrivalTime": null
+              },
+              "distance": 1051,
+              "duration": 18,
+              "tripIdx": null,
+              "headsign": null,
+              "wayType": null,
+              "routes": [],
+              "stations": [],
+              "arrivals": [],
+              "points": [
+                { "x": 127.0798187, "y": 37.5988159 },
+                { "x": 127.0856709, "y": 37.5959203 }
+              ],
+              "walkpath": {
+                "legs": [
+                  {
+                    "steps": [
+                      {
+                        "cross": null,
+                        "distance": 0,
+                        "duration": 0,
+                        "eye": [127.0798384, 37.5988187],
+                        "junc": null,
+                        "lat": 37.5988187,
+                        "lng": 127.0798384,
+                        "lookAt": [127.0798548, 37.5987232],
+                        "path": null,
+                        "poi": null,
+                        "road": null,
+                        "turn": 14,
+                        "turnDesc": "국민은행중화동지점",
+                        "turnInfo": null,
+                        "upwa": null
+                      },
+                      {
+                        "cross": null,
+                        "distance": 417,
+                        "duration": 430,
+                        "eye": [127.0798384, 37.5988187],
+                        "junc": null,
+                        "lat": 37.5988187,
+                        "lng": 127.0798384,
+                        "lookAt": [127.0798548, 37.5987232],
+                        "path": "127.0798384,37.5988187 127.0798618,37.5986854 127.0799560,37.5982549 127.0799815,37.5981423 127.0800001,37.5980639 127.0800571,37.5978037 127.0800779,37.5977199 127.0801120,37.5975046 127.0801592,37.5971650 127.0801720,37.5971028 127.0801703,37.5970145 127.0801624,37.5963916 127.0801626,37.5963520 127.0801586,37.5962618 127.0801524,37.5959562 127.0801337,37.5956659 127.0800758,37.5952755 127.0800394,37.5950969",
+                        "poi": null,
+                        "road": null,
+                        "turn": 1,
+                        "turnDesc": "동일로지하차도까지 직진",
+                        "turnInfo": null,
+                        "upwa": null
+                      },
+                      {
+                        "cross": null,
+                        "distance": 42,
+                        "duration": 37,
+                        "eye": [127.0800659, 37.5952304],
+                        "junc": null,
+                        "lat": 37.5950969,
+                        "lng": 127.0800394,
+                        "lookAt": [127.0801492, 37.5951234],
+                        "path": "127.0800394,37.5950969 127.0801933,37.5951344 127.0804309,37.5951884 127.0804965,37.5952048",
+                        "poi": null,
+                        "road": "망우로",
+                        "turn": 8,
+                        "turnDesc": "한샘교회 방면으로 횡단보도 건너기",
+                        "turnInfo": null,
+                        "upwa": null
+                      },
+                      {
+                        "cross": null,
+                        "distance": 496,
+                        "duration": 466,
+                        "eye": [127.080329, 37.5951646],
+                        "junc": null,
+                        "lat": 37.5952048,
+                        "lng": 127.0804965,
+                        "lookAt": [127.0806141, 37.5952332],
+                        "path": "127.0804965,37.5952048 127.0805338,37.5952140 127.0805677,37.5952222 127.0807306,37.5952616 127.0812397,37.5953832 127.0813268,37.5954061 127.0824353,37.5956957 127.0826106,37.5957405 127.0832011,37.5958913 127.0833538,37.5959306 127.0834432,37.5959535 127.0840133,37.5960925 127.0850019,37.5963709 127.0850821,37.5963955 127.0852450,37.5964393 127.0854520,37.5964969 127.0858400,37.5965974",
+                        "poi": null,
+                        "road": null,
+                        "turn": 1,
+                        "turnDesc": "상봉역(시외버스터미널)까지 직진",
+                        "turnInfo": null,
+                        "upwa": null
+                      },
+                      {
+                        "cross": null,
+                        "distance": 96,
+                        "duration": 124,
+                        "eye": [127.0856737, 37.5965535],
+                        "junc": null,
+                        "lat": 37.5965974,
+                        "lng": 127.08584,
+                        "lookAt": [127.0857361, 37.5965492],
+                        "path": "127.0858400,37.5965974 127.0857926,37.5965629 127.0855222,37.5964971 127.0855894,37.5962368 127.0856659,37.5959171",
+                        "poi": null,
+                        "road": null,
+                        "turn": 12,
+                        "turnDesc": "상봉역(시외버스터미널) 1번 출구",
+                        "turnInfo": null,
+                        "upwa": {
+                          "from": {
+                            "exit": "1",
+                            "name": "상봉역(시외버스터미널)"
+                          },
+                          "to": null
+                        }
+                      },
+                      {
+                        "cross": null,
+                        "distance": 0,
+                        "duration": 0,
+                        "eye": [127.0856335, 37.5960495],
+                        "junc": null,
+                        "lat": 37.5959171,
+                        "lng": 127.0856659,
+                        "lookAt": [127.0856659, 37.5959171],
+                        "path": null,
+                        "poi": null,
+                        "road": null,
+                        "turn": 15,
+                        "turnDesc": "도착",
+                        "turnInfo": "도로의 오른쪽에 있습니다.",
+                        "upwa": null
+                      }
+                    ],
+                    "summary": { "distance": 1051, "duration": 1059 }
+                  }
+                ],
+                "summary": {
+                  "bound": [
+                    [127.0798384, 37.5950969],
+                    [127.08584, 37.5988187]
+                  ],
+                  "crosswalk": 1,
+                  "distance": 1051,
+                  "dupOptions": [],
+                  "duration": 1059,
+                  "facilityDesc": null,
+                  "option": "reco",
+                  "overpass": 0,
+                  "stair": 0,
+                  "stepCount": 1642,
+                  "underpass": 1,
+                  "ways": [
+                    {
+                      "lat": 37.5988187,
+                      "lng": 127.0798384,
+                      "multiEntrance": false,
+                      "name": "국민은행중화동지점"
+                    },
+                    {
+                      "lat": 37.5959171,
+                      "lng": 127.0856659,
+                      "multiEntrance": false,
+                      "name": "도착"
+                    }
+                  ]
+                }
+              },
+              "shutdown": false,
+              "lastTrip": false,
+              "firstTrip": false,
+              "departureCity": null,
+              "stationIdAsOptional": null
+            }
+          ]
+        }
+      ],
+      "transferCount": 0,
+      "directionsType": "CITY",
+      "pathLabels": [],
+      "vehicleTypes": ["BUS"]
+    },
+    {
+      "idx": 5,
+      "mode": "TIME",
+      "type": "BUS",
+      "optimizationMethod": "RECOMMEND",
+      "labels": [],
+      "departureTime": "2022-05-20T23:25:44",
+      "arrivalTime": "2022-05-21T00:28:02",
+      "alarmDepartureTime": null,
+      "alarmArrivalTime": null,
+      "duration": 63,
+      "intercityDuration": 0,
+      "walkingDuration": 32,
+      "waitingDuration": 1,
+      "distance": 9545,
+      "shutdown": false,
+      "fare": 2150,
+      "fares": [
+        {
+          "routes": [
+            [
+              {
+                "id": 575,
+                "name": "N61",
+                "longName": "N61",
+                "type": {
+                  "id": 11,
+                  "name": "간선",
+                  "shortName": "간선",
+                  "iconName": "간선",
+                  "color": "#386de8"
+                },
+                "realtime": true,
+                "useInterval": true,
+                "operationType": "일반",
+                "operation": {
+                  "type": "NORMAL",
+                  "name": "일반",
+                  "shortName": "일"
+                },
+                "color": null,
+                "platform": null,
+                "headsign": null,
+                "busInterval": null,
+                "flag": null
+              }
+            ]
+          ],
+          "fare": 2150,
+          "tripIdx": 141220
+        }
+      ],
+      "legs": [
+        {
+          "steps": [
+            {
+              "type": "WALKING",
+              "instruction": "도보 838m",
+              "info": { "walk": "도보 838m", "etc": null, "subway": null },
+              "departureTime": "2022-05-20T23:25:44",
+              "arrivalTime": "2022-05-20T23:40:00",
+              "alarmTime": {
+                "alarmDepartureTime": null,
+                "alarmArrivalTime": null
+              },
+              "distance": 838,
+              "duration": 14,
+              "tripIdx": null,
+              "headsign": null,
+              "wayType": null,
+              "routes": [],
+              "stations": [],
+              "arrivals": [],
+              "points": [
+                { "x": 127.0576351, "y": 37.6653828 },
+                { "x": 127.0625916, "y": 37.6605568 }
+              ],
+              "walkpath": {
+                "legs": [
+                  {
+                    "steps": [
+                      {
+                        "cross": null,
+                        "distance": 0,
+                        "duration": 0,
+                        "eye": [127.0576347, 37.6653817],
+                        "junc": null,
+                        "lat": 37.6653817,
+                        "lng": 127.0576347,
+                        "lookAt": [127.0576579, 37.6652917],
+                        "path": null,
+                        "poi": null,
+                        "road": null,
+                        "turn": 14,
+                        "turnDesc": "출발",
+                        "turnInfo": null,
+                        "upwa": null
+                      },
+                      {
+                        "cross": null,
+                        "distance": 141,
+                        "duration": 165,
+                        "eye": [127.0576347, 37.6653817],
+                        "junc": null,
+                        "lat": 37.6653817,
+                        "lng": 127.0576347,
+                        "lookAt": [127.0576579, 37.6652917],
+                        "path": "127.0576347,37.6653817 127.0577634,37.6648901 127.0578319,37.6646307 127.0579791,37.6646547 127.0580475,37.6644053 127.0580730,37.6643108 127.0580630,37.6642819",
+                        "poi": null,
+                        "road": "동일로",
+                        "turn": 12,
+                        "turnDesc": "마들역 4번 출구",
+                        "turnInfo": null,
+                        "upwa": {
+                          "from": null,
+                          "to": { "exit": "4", "name": "마들역" }
+                        }
+                      },
+                      {
+                        "cross": null,
+                        "distance": 336,
+                        "duration": 298,
+                        "eye": [127.0580417, 37.6644224],
+                        "junc": null,
+                        "lat": 37.6642819,
+                        "lng": 127.058063,
+                        "lookAt": [127.0580862, 37.6641927],
+                        "path": "127.0580630,37.6642819 127.0583877,37.6630546 127.0586510,37.6620506 127.0586799,37.6619569 127.0588212,37.6614527 127.0588567,37.6613925 127.0589092,37.6613485",
+                        "poi": null,
+                        "road": "노원로",
+                        "turn": 1,
+                        "turnDesc": "직진",
+                        "turnInfo": null,
+                        "upwa": null
+                      },
+                      {
+                        "cross": null,
+                        "distance": 232,
+                        "duration": 272,
+                        "eye": [127.0588155, 37.6614698],
+                        "junc": null,
+                        "lat": 37.6613485,
+                        "lng": 127.0589092,
+                        "lookAt": [127.0590194, 37.6612966],
+                        "path": "127.0589092,37.6613485 127.0589626,37.6613172 127.0590433,37.6612886 127.0595084,37.6612408 127.0599248,37.6611919 127.0615063,37.6610238",
+                        "poi": null,
+                        "road": "노원로",
+                        "turn": 2,
+                        "turnDesc": "왼쪽 방향",
+                        "turnInfo": null,
+                        "upwa": null
+                      },
+                      {
+                        "cross": null,
+                        "distance": 48,
+                        "duration": 43,
+                        "eye": [127.0613361, 37.6610412],
+                        "junc": null,
+                        "lat": 37.6610238,
+                        "lng": 127.0615063,
+                        "lookAt": [127.0614898, 37.66093],
+                        "path": "127.0615063,37.6610238 127.0614800,37.6608750 127.0614669,37.6607911 127.0615780,37.6607780 127.0616053,37.6607745 127.0616597,37.6607675 127.0617142,37.6607614",
+                        "poi": null,
+                        "road": "노원로",
+                        "turn": 8,
+                        "turnDesc": "상계주공7단지아파트717동 방면으로 2개 횡단보도 건너기",
+                        "turnInfo": null,
+                        "upwa": null
+                      },
+                      {
+                        "cross": null,
+                        "distance": 81,
+                        "duration": 76,
+                        "eye": [127.0615156, 37.660785],
+                        "junc": null,
+                        "lat": 37.6607614,
+                        "lng": 127.0617142,
+                        "lookAt": [127.0618288, 37.6607429],
+                        "path": "127.0617142,37.6607614 127.0617494,37.6607552 127.0619763,37.6607200 127.0623066,37.6606581 127.0625940,37.6605691",
+                        "poi": null,
+                        "road": null,
+                        "turn": 1,
+                        "turnDesc": "직진",
+                        "turnInfo": null,
+                        "upwa": null
+                      },
+                      {
+                        "cross": null,
+                        "distance": 0,
+                        "duration": 0,
+                        "eye": [127.0624338, 37.660618],
+                        "junc": null,
+                        "lat": 37.6605691,
+                        "lng": 127.062594,
+                        "lookAt": [127.062594, 37.6605691],
+                        "path": null,
+                        "poi": null,
+                        "road": null,
+                        "turn": 15,
+                        "turnDesc": "상계주공7단지.광림교회앞",
+                        "turnInfo": "도로의 오른쪽에 있습니다.",
+                        "upwa": null
+                      }
+                    ],
+                    "summary": { "distance": 838, "duration": 856 }
+                  }
+                ],
+                "summary": {
+                  "bound": [
+                    [127.0576347, 37.6605691],
+                    [127.062594, 37.6653817]
+                  ],
+                  "crosswalk": 2,
+                  "distance": 838,
+                  "dupOptions": [],
+                  "duration": 856,
+                  "facilityDesc": null,
+                  "option": "reco",
+                  "overpass": 0,
+                  "stair": 1,
+                  "stepCount": 1310,
+                  "underpass": 1,
+                  "ways": [
+                    {
+                      "lat": 37.6653817,
+                      "lng": 127.0576347,
+                      "multiEntrance": false,
+                      "name": "출발"
+                    },
+                    {
+                      "lat": 37.6605691,
+                      "lng": 127.062594,
+                      "multiEntrance": false,
+                      "name": "상계주공7단지.광림교회앞"
+                    }
+                  ]
+                }
+              },
+              "shutdown": false,
+              "lastTrip": false,
+              "firstTrip": false,
+              "departureCity": null,
+              "stationIdAsOptional": null
+            },
+            {
+              "type": "BUS",
+              "instruction": "버스 승차",
+              "info": { "walk": null, "etc": "버스 승차", "subway": null },
+              "departureTime": "2022-05-20T23:40:00",
+              "arrivalTime": "2022-05-21T00:10:23",
+              "alarmTime": {
+                "alarmDepartureTime": null,
+                "alarmArrivalTime": null
+              },
+              "distance": 7656,
+              "duration": 30,
+              "tripIdx": 141220,
+              "headsign": null,
+              "wayType": "DOWN",
+              "routes": [
+                {
+                  "id": 575,
+                  "name": "N61",
+                  "longName": "N61",
+                  "type": {
+                    "id": 11,
+                    "name": "간선",
+                    "shortName": "간선",
+                    "iconName": "간선",
+                    "color": "#386de8"
+                  },
+                  "realtime": true,
+                  "useInterval": true,
+                  "operationType": "일반",
+                  "operation": {
+                    "type": "NORMAL",
+                    "name": "일반",
+                    "shortName": "일"
+                  },
+                  "color": null,
+                  "platform": null,
+                  "headsign": null,
+                  "busInterval": {
+                    "message": { "date": "매일", "intervalCount": "15-25분" }
+                  },
+                  "flag": {
+                    "typeCode": "C04",
+                    "typeName": "심야A",
+                    "symbol": "심야",
+                    "shortMessage": "심야 운행 노선",
+                    "longMessage": "심야에 운행하는 노선입니다"
+                  }
+                }
+              ],
+              "stations": [
+                {
+                  "id": 124399,
+                  "placeId": null,
+                  "name": "상계주공7단지.광림교회앞",
+                  "longName": null,
+                  "displayName": "상계주공7단지.광림교회앞",
+                  "displayCode": "11188",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 176665,
+                  "placeId": null,
+                  "name": "온곡중학교노원정보도서관",
+                  "longName": null,
+                  "displayName": "온곡중학교노원정보도서관",
+                  "displayCode": "11193",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 107889,
+                  "placeId": null,
+                  "name": "상계초등학교",
+                  "longName": null,
+                  "displayName": "상계초등학교",
+                  "displayCode": "11208",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 107785,
+                  "placeId": null,
+                  "name": "노원역9번출구",
+                  "longName": null,
+                  "displayName": "노원역9번출구",
+                  "displayCode": "11210",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 107727,
+                  "placeId": null,
+                  "name": "상계주공3단지",
+                  "longName": null,
+                  "displayName": "상계주공3단지",
+                  "displayCode": "11244",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 107752,
+                  "placeId": null,
+                  "name": "상계주공2단지",
+                  "longName": null,
+                  "displayName": "상계주공2단지",
+                  "displayCode": "11245",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 107818,
+                  "placeId": null,
+                  "name": "상계주공1단지",
+                  "longName": null,
+                  "displayName": "상계주공1단지",
+                  "displayCode": "11246",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 107870,
+                  "placeId": null,
+                  "name": "중계역",
+                  "longName": null,
+                  "displayName": "중계역",
+                  "displayCode": "11366",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 107935,
+                  "placeId": null,
+                  "name": "노원구민의전당",
+                  "longName": null,
+                  "displayName": "노원구민의전당",
+                  "displayCode": "11367",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 107986,
+                  "placeId": null,
+                  "name": "하계역",
+                  "longName": null,
+                  "displayName": "하계역",
+                  "displayCode": "11447",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 108044,
+                  "placeId": null,
+                  "name": "하계장미아파트",
+                  "longName": null,
+                  "displayName": "하계장미아파트",
+                  "displayCode": "11448",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 108148,
+                  "placeId": null,
+                  "name": "서울과학기술대입구",
+                  "longName": null,
+                  "displayName": "서울과학기술대입구",
+                  "displayCode": "11160",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 108192,
+                  "placeId": null,
+                  "name": "공릉역4번출구",
+                  "longName": null,
+                  "displayName": "공릉역4번출구",
+                  "displayCode": "11162",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 111457,
+                  "placeId": null,
+                  "name": "공릉시장",
+                  "longName": null,
+                  "displayName": "공릉시장",
+                  "displayCode": "11102",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 108265,
+                  "placeId": null,
+                  "name": "태릉입구역3번출구",
+                  "longName": null,
+                  "displayName": "태릉입구역3번출구",
+                  "displayCode": "11104",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 108324,
+                  "placeId": null,
+                  "name": "극동늘푸른아파트",
+                  "longName": null,
+                  "displayName": "극동늘푸른아파트",
+                  "displayCode": "07101",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 108353,
+                  "placeId": null,
+                  "name": "묵동삼거리.먹골역",
+                  "longName": null,
+                  "displayName": "묵동삼거리.먹골역",
+                  "displayCode": "07103",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 151565,
+                  "placeId": null,
+                  "name": "먹골역",
+                  "longName": null,
+                  "displayName": "먹골역",
+                  "displayCode": "07425",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 108389,
+                  "placeId": null,
+                  "name": "한국전력동부지사",
+                  "longName": null,
+                  "displayName": "한국전력동부지사",
+                  "displayCode": "07105",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 108414,
+                  "placeId": null,
+                  "name": "지하철7호선중화역",
+                  "longName": null,
+                  "displayName": "지하철7호선중화역",
+                  "displayCode": "07107",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                },
+                {
+                  "id": 108445,
+                  "placeId": null,
+                  "name": "국민은행중화동지점",
+                  "longName": null,
+                  "displayName": "국민은행중화동지점",
+                  "displayCode": "07109",
+                  "stop": true,
+                  "realtime": true,
+                  "aux": null
+                }
+              ],
+              "arrivals": [
+                {
+                  "status": "END",
+                  "stationId": 124399,
+                  "routeId": 575,
+                  "items": []
+                }
+              ],
+              "points": [
+                { "x": 127.0625916, "y": 37.6605568 },
+                { "x": 127.0628281, "y": 37.66045 },
+                { "x": 127.0632324, "y": 37.6602631 },
+                { "x": 127.063652, "y": 37.6600037 },
+                { "x": 127.0639267, "y": 37.6597633 },
+                { "x": 127.06427, "y": 37.6594238 },
+                { "x": 127.06427, "y": 37.6594238 },
+                { "x": 127.0648575, "y": 37.6588135 },
+                { "x": 127.0658875, "y": 37.6576729 },
+                { "x": 127.0658875, "y": 37.6576729 },
+                { "x": 127.0663452, "y": 37.6572113 },
+                { "x": 127.0663528, "y": 37.657135 },
+                { "x": 127.0654831, "y": 37.6569023 },
+                { "x": 127.0625839, "y": 37.6562843 },
+                { "x": 127.0618973, "y": 37.6561241 },
+                { "x": 127.0618973, "y": 37.6561241 },
+                { "x": 127.0605774, "y": 37.6557922 },
+                { "x": 127.0603409, "y": 37.6557274 },
+                { "x": 127.0601883, "y": 37.6556511 },
+                { "x": 127.0601349, "y": 37.6555061 },
+                { "x": 127.0601273, "y": 37.6553802 },
+                { "x": 127.0610199, "y": 37.6520004 },
+                { "x": 127.0610199, "y": 37.6520004 },
+                { "x": 127.0612335, "y": 37.6512489 },
+                { "x": 127.0617294, "y": 37.649437 },
+                { "x": 127.0617294, "y": 37.649437 },
+                { "x": 127.0618515, "y": 37.6490822 },
+                { "x": 127.0620193, "y": 37.6487961 },
+                { "x": 127.062233, "y": 37.6483765 },
+                { "x": 127.0625839, "y": 37.6476517 },
+                { "x": 127.0625839, "y": 37.6476517 },
+                { "x": 127.0633011, "y": 37.6463203 },
+                { "x": 127.0633316, "y": 37.6461334 },
+                { "x": 127.0635452, "y": 37.6456947 },
+                { "x": 127.064064, "y": 37.6447067 },
+                { "x": 127.0643158, "y": 37.6441193 },
+                { "x": 127.0643158, "y": 37.6441193 },
+                { "x": 127.0648193, "y": 37.6430931 },
+                { "x": 127.0657883, "y": 37.640934 },
+                { "x": 127.0664673, "y": 37.6393738 },
+                { "x": 127.0664673, "y": 37.6393738 },
+                { "x": 127.0667343, "y": 37.6388245 },
+                { "x": 127.0670319, "y": 37.6381569 },
+                { "x": 127.0673752, "y": 37.63731 },
+                { "x": 127.0676117, "y": 37.6367073 },
+                { "x": 127.0676117, "y": 37.6367073 },
+                { "x": 127.0681152, "y": 37.6356125 },
+                { "x": 127.068779, "y": 37.6342201 },
+                { "x": 127.068779, "y": 37.6342201 },
+                { "x": 127.0690689, "y": 37.6335754 },
+                { "x": 127.0695114, "y": 37.6329002 },
+                { "x": 127.070816, "y": 37.6299629 },
+                { "x": 127.0709457, "y": 37.6293907 },
+                { "x": 127.0714188, "y": 37.6283684 },
+                { "x": 127.0714188, "y": 37.6283684 },
+                { "x": 127.0719757, "y": 37.6273155 },
+                { "x": 127.072319, "y": 37.6266136 },
+                { "x": 127.072319, "y": 37.6266136 },
+                { "x": 127.072731, "y": 37.6257668 },
+                { "x": 127.0729446, "y": 37.6252441 },
+                { "x": 127.0737457, "y": 37.6227722 },
+                { "x": 127.0737457, "y": 37.6227722 },
+                { "x": 127.074295, "y": 37.6211395 },
+                { "x": 127.074852, "y": 37.6194115 },
+                { "x": 127.074852, "y": 37.6194115 },
+                { "x": 127.0758743, "y": 37.6163673 },
+                { "x": 127.0764084, "y": 37.6146584 },
+                { "x": 127.0764084, "y": 37.6146584 },
+                { "x": 127.0770874, "y": 37.6125793 },
+                { "x": 127.0770874, "y": 37.6125793 },
+                { "x": 127.07724, "y": 37.612133 },
+                { "x": 127.0773239, "y": 37.611824 },
+                { "x": 127.077858, "y": 37.6089935 },
+                { "x": 127.077858, "y": 37.6089935 },
+                { "x": 127.0782089, "y": 37.6071396 },
+                { "x": 127.0782089, "y": 37.6071396 },
+                { "x": 127.0783157, "y": 37.6066818 },
+                { "x": 127.078743, "y": 37.6044426 },
+                { "x": 127.0790787, "y": 37.6026382 },
+                { "x": 127.0790787, "y": 37.6026382 },
+                { "x": 127.0792999, "y": 37.6014442 },
+                { "x": 127.0798187, "y": 37.5988159 },
+                { "x": 127.0798187, "y": 37.5988159 }
+              ],
+              "walkpath": null,
+              "shutdown": false,
+              "lastTrip": false,
+              "firstTrip": false,
+              "departureCity": null,
+              "stationIdAsOptional": null
+            },
+            {
+              "type": "WALKING",
+              "instruction": "도보 1.1km",
+              "info": { "walk": "도보 1.1km", "etc": null, "subway": null },
+              "departureTime": "2022-05-21T00:10:23",
+              "arrivalTime": "2022-05-21T00:28:02",
+              "alarmTime": {
+                "alarmDepartureTime": null,
+                "alarmArrivalTime": null
+              },
+              "distance": 1051,
+              "duration": 18,
+              "tripIdx": null,
+              "headsign": null,
+              "wayType": null,
+              "routes": [],
+              "stations": [],
+              "arrivals": [],
+              "points": [
+                { "x": 127.0798187, "y": 37.5988159 },
+                { "x": 127.0856709, "y": 37.5959203 }
+              ],
+              "walkpath": {
+                "legs": [
+                  {
+                    "steps": [
+                      {
+                        "cross": null,
+                        "distance": 0,
+                        "duration": 0,
+                        "eye": [127.0798384, 37.5988187],
+                        "junc": null,
+                        "lat": 37.5988187,
+                        "lng": 127.0798384,
+                        "lookAt": [127.0798548, 37.5987232],
+                        "path": null,
+                        "poi": null,
+                        "road": null,
+                        "turn": 14,
+                        "turnDesc": "국민은행중화동지점",
+                        "turnInfo": null,
+                        "upwa": null
+                      },
+                      {
+                        "cross": null,
+                        "distance": 417,
+                        "duration": 430,
+                        "eye": [127.0798384, 37.5988187],
+                        "junc": null,
+                        "lat": 37.5988187,
+                        "lng": 127.0798384,
+                        "lookAt": [127.0798548, 37.5987232],
+                        "path": "127.0798384,37.5988187 127.0798618,37.5986854 127.0799560,37.5982549 127.0799815,37.5981423 127.0800001,37.5980639 127.0800571,37.5978037 127.0800779,37.5977199 127.0801120,37.5975046 127.0801592,37.5971650 127.0801720,37.5971028 127.0801703,37.5970145 127.0801624,37.5963916 127.0801626,37.5963520 127.0801586,37.5962618 127.0801524,37.5959562 127.0801337,37.5956659 127.0800758,37.5952755 127.0800394,37.5950969",
+                        "poi": null,
+                        "road": null,
+                        "turn": 1,
+                        "turnDesc": "동일로지하차도까지 직진",
+                        "turnInfo": null,
+                        "upwa": null
+                      },
+                      {
+                        "cross": null,
+                        "distance": 42,
+                        "duration": 37,
+                        "eye": [127.0800659, 37.5952304],
+                        "junc": null,
+                        "lat": 37.5950969,
+                        "lng": 127.0800394,
+                        "lookAt": [127.0801492, 37.5951234],
+                        "path": "127.0800394,37.5950969 127.0801933,37.5951344 127.0804309,37.5951884 127.0804965,37.5952048",
+                        "poi": null,
+                        "road": "망우로",
+                        "turn": 8,
+                        "turnDesc": "한샘교회 방면으로 횡단보도 건너기",
+                        "turnInfo": null,
+                        "upwa": null
+                      },
+                      {
+                        "cross": null,
+                        "distance": 496,
+                        "duration": 466,
+                        "eye": [127.080329, 37.5951646],
+                        "junc": null,
+                        "lat": 37.5952048,
+                        "lng": 127.0804965,
+                        "lookAt": [127.0806141, 37.5952332],
+                        "path": "127.0804965,37.5952048 127.0805338,37.5952140 127.0805677,37.5952222 127.0807306,37.5952616 127.0812397,37.5953832 127.0813268,37.5954061 127.0824353,37.5956957 127.0826106,37.5957405 127.0832011,37.5958913 127.0833538,37.5959306 127.0834432,37.5959535 127.0840133,37.5960925 127.0850019,37.5963709 127.0850821,37.5963955 127.0852450,37.5964393 127.0854520,37.5964969 127.0858400,37.5965974",
+                        "poi": null,
+                        "road": null,
+                        "turn": 1,
+                        "turnDesc": "상봉역(시외버스터미널)까지 직진",
+                        "turnInfo": null,
+                        "upwa": null
+                      },
+                      {
+                        "cross": null,
+                        "distance": 96,
+                        "duration": 124,
+                        "eye": [127.0856737, 37.5965535],
+                        "junc": null,
+                        "lat": 37.5965974,
+                        "lng": 127.08584,
+                        "lookAt": [127.0857361, 37.5965492],
+                        "path": "127.0858400,37.5965974 127.0857926,37.5965629 127.0855222,37.5964971 127.0855894,37.5962368 127.0856659,37.5959171",
+                        "poi": null,
+                        "road": null,
+                        "turn": 12,
+                        "turnDesc": "상봉역(시외버스터미널) 1번 출구",
+                        "turnInfo": null,
+                        "upwa": {
+                          "from": {
+                            "exit": "1",
+                            "name": "상봉역(시외버스터미널)"
+                          },
+                          "to": null
+                        }
+                      },
+                      {
+                        "cross": null,
+                        "distance": 0,
+                        "duration": 0,
+                        "eye": [127.0856335, 37.5960495],
+                        "junc": null,
+                        "lat": 37.5959171,
+                        "lng": 127.0856659,
+                        "lookAt": [127.0856659, 37.5959171],
+                        "path": null,
+                        "poi": null,
+                        "road": null,
+                        "turn": 15,
+                        "turnDesc": "도착",
+                        "turnInfo": "도로의 오른쪽에 있습니다.",
+                        "upwa": null
+                      }
+                    ],
+                    "summary": { "distance": 1051, "duration": 1059 }
+                  }
+                ],
+                "summary": {
+                  "bound": [
+                    [127.0798384, 37.5950969],
+                    [127.08584, 37.5988187]
+                  ],
+                  "crosswalk": 1,
+                  "distance": 1051,
+                  "dupOptions": [],
+                  "duration": 1059,
+                  "facilityDesc": null,
+                  "option": "reco",
+                  "overpass": 0,
+                  "stair": 0,
+                  "stepCount": 1642,
+                  "underpass": 1,
+                  "ways": [
+                    {
+                      "lat": 37.5988187,
+                      "lng": 127.0798384,
+                      "multiEntrance": false,
+                      "name": "국민은행중화동지점"
+                    },
+                    {
+                      "lat": 37.5959171,
+                      "lng": 127.0856659,
+                      "multiEntrance": false,
+                      "name": "도착"
+                    }
+                  ]
+                }
+              },
+              "shutdown": false,
+              "lastTrip": false,
+              "firstTrip": false,
+              "departureCity": null,
+              "stationIdAsOptional": null
+            }
+          ]
+        }
+      ],
+      "transferCount": 0,
+      "directionsType": "CITY",
+      "pathLabels": [],
+      "vehicleTypes": ["BUS"]
+    }
+  ],
+  "staticPaths": []
+}
