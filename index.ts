@@ -1,1 +1,0 @@
-import { NaverMapCrawler } from "./src/navermap.js";
