@@ -1,0 +1,289 @@
+{
+  "geocoded_waypoints": [
+    {
+      "geocoder_status": "OK",
+      "place_id": "ChIJt9UbK0m7fDURiWq02pPyuGE",
+      "types": [
+        "convenience_store",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "geocoder_status": "OK",
+      "place_id": "ChIJBVAHrOmkfDURiatjSxtmL6o",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "subway_station",
+        "transit_station"
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "bounds": {
+        "northeast": {
+          "lat": 37.596169,
+          "lng": 127.088611
+        },
+        "southwest": {
+          "lat": 37.5399298,
+          "lng": 127.069276
+        }
+      },
+      "copyrights": "Map data ©2022 TMap Mobility",
+      "legs": [
+        {
+          "arrival_time": {
+            "text": "11:31pm",
+            "time_zone": "Asia/Seoul",
+            "value": 1653229907
+          },
+          "departure_time": {
+            "text": "11:16pm",
+            "time_zone": "Asia/Seoul",
+            "value": 1653228965
+          },
+          "distance": {
+            "text": "6.8 km",
+            "value": 6813
+          },
+          "duration": {
+            "text": "16 mins",
+            "value": 942
+          },
+          "end_address": "Konkuk Univ., Hwayang-dong, Seoul, South Korea",
+          "end_location": {
+            "lat": 37.540372,
+            "lng": 127.069276
+          },
+          "start_address": "115 Sangbong-dong, Jungnang-gu, Seoul, South Korea",
+          "start_location": {
+            "lat": 37.595589,
+            "lng": 127.085736
+          },
+          "steps": [
+            {
+              "distance": {
+                "text": "0.1 km",
+                "value": 115
+              },
+              "duration": {
+                "text": "3 mins",
+                "value": 180
+              },
+              "end_location": {
+                "lat": 37.59592,
+                "lng": 127.085671
+              },
+              "html_instructions": "Walk to Sangbong",
+              "polyline": {
+                "points": "m{mdF{ltfWsBrAp@eA"
+              },
+              "start_location": {
+                "lat": 37.595589,
+                "lng": 127.085736
+              },
+              "steps": [
+                {
+                  "distance": {
+                    "text": "74 m",
+                    "value": 74
+                  },
+                  "duration": {
+                    "text": "1 min",
+                    "value": 75
+                  },
+                  "end_location": {
+                    "lat": 37.596169,
+                    "lng": 127.085319
+                  },
+                  "polyline": {
+                    "points": "m{mdF{ltfWsBrA"
+                  },
+                  "start_location": {
+                    "lat": 37.595589,
+                    "lng": 127.085736
+                  },
+                  "travel_mode": "WALKING"
+                },
+                {
+                  "distance": {
+                    "text": "1 m",
+                    "value": 0
+                  },
+                  "duration": {
+                    "text": "1 min",
+                    "value": 71
+                  },
+                  "end_location": {
+                    "lat": 37.596169,
+                    "lng": 127.085319
+                  },
+                  "html_instructions": "Take entrance <span class=\"location\">5</span>",
+                  "polyline": {
+                    "points": "a_ndFgjtfW"
+                  },
+                  "start_location": {
+                    "lat": 37.596169,
+                    "lng": 127.085319
+                  },
+                  "travel_mode": "WALKING"
+                },
+                {
+                  "distance": {
+                    "text": "1 m",
+                    "value": 0
+                  },
+                  "duration": {
+                    "text": "1 min",
+                    "value": 0
+                  },
+                  "end_location": {
+                    "lat": 37.596169,
+                    "lng": 127.085319
+                  },
+                  "polyline": {
+                    "points": "a_ndFgjtfW"
+                  },
+                  "start_location": {
+                    "lat": 37.596169,
+                    "lng": 127.085319
+                  },
+                  "travel_mode": "WALKING"
+                },
+                {
+                  "distance": {
+                    "text": "1 m",
+                    "value": 0
+                  },
+                  "duration": {
+                    "text": "1 min",
+                    "value": 0
+                  },
+                  "end_location": {
+                    "lat": 37.596169,
+                    "lng": 127.085319
+                  },
+                  "polyline": {
+                    "points": "a_ndFgjtfW"
+                  },
+                  "start_location": {
+                    "lat": 37.596169,
+                    "lng": 127.085319
+                  },
+                  "travel_mode": "WALKING"
+                },
+                {
+                  "distance": {
+                    "text": "41 m",
+                    "value": 41
+                  },
+                  "duration": {
+                    "text": "1 min",
+                    "value": 34
+                  },
+                  "end_location": {
+                    "lat": 37.59592,
+                    "lng": 127.085671
+                  },
+                  "polyline": {
+                    "points": "a_ndFgjtfWp@eA"
+                  },
+                  "start_location": {
+                    "lat": 37.596169,
+                    "lng": 127.085319
+                  },
+                  "travel_mode": "WALKING"
+                }
+              ],
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "6.7 km",
+                "value": 6698
+              },
+              "duration": {
+                "text": "13 mins",
+                "value": 780
+              },
+              "end_location": {
+                "lat": 37.540372,
+                "lng": 127.069276
+              },
+              "html_instructions": "Subway towards 743",
+              "polyline": {
+                "points": "o}mdFmltfWfUyD`HkAhLgB?AjCa@pHmBzBYvCQx@ExCG~AAhEMpA?|@Cv@@`CPjDTrIz@~BVtEd@fH|@~BXx@Jv@l@h@j@bBtAXLh@Pl@Nb@BlKEbC@fAD`AJl@JdA`@vNxGnBdApXzLxJfErMjGLF^R|Al@nLrFpBt@zBx@fDlApBp@lDjApAf@bBt@jFjCrDtB`B`AdAl@hC|AlOnFdLtDxCjAnDjAB?FBwAxG"
+              },
+              "start_location": {
+                "lat": 37.59592,
+                "lng": 127.085671
+              },
+              "transit_details": {
+                "arrival_stop": {
+                  "location": {
+                    "lat": 37.540372,
+                    "lng": 127.069276
+                  },
+                  "name": "Konkuk Univ."
+                },
+                "arrival_time": {
+                  "text": "11:31pm",
+                  "time_zone": "Asia/Seoul",
+                  "value": 1653229907
+                },
+                "departure_stop": {
+                  "location": {
+                    "lat": 37.59592,
+                    "lng": 127.085671
+                  },
+                  "name": "Sangbong"
+                },
+                "departure_time": {
+                  "text": "11:19pm",
+                  "time_zone": "Asia/Seoul",
+                  "value": 1653229145
+                },
+                "headsign": "743",
+                "line": {
+                  "agencies": [
+                    {
+                      "name": "서울도시철도공사",
+                      "url": "http://www.odsay.com/Subway/LineInfo.asp?CID=1000&LMenu=2/"
+                    }
+                  ],
+                  "color": "#69870e",
+                  "name": "서울지하철",
+                  "short_name": "7호선",
+                  "text_color": "#ffffff",
+                  "vehicle": {
+                    "icon": "//maps.gstatic.com/mapfiles/transit/iw2/6/subway2.png",
+                    "name": "Subway",
+                    "type": "SUBWAY"
+                  }
+                },
+                "num_stops": 7
+              },
+              "travel_mode": "TRANSIT"
+            }
+          ],
+          "traffic_speed_entry": [],
+          "via_waypoint": []
+        }
+      ],
+      "overview_polyline": {
+        "points": "m{mdF{ltfWsBrAp@eAfUyDvYwEpHmBzBYpEWxFIhEMpA?tBA`CPjDTrIz@tI|@fLvAx@Jv@l@h@j@bBtAbA^l@Nb@BpOCfAD`AJl@JdA`@vNxGnBdApXzLxJfErMjGl@Z|Al@nLrFlFnBxOrFbBt@jFjCtGvDnEjClOnFdLtDxCjAnDjAJBwAxG"
+      },
+      "summary": "",
+      "warnings": [
+        "Walking directions are in beta. Use caution – This route may be missing sidewalks or pedestrian paths."
+      ],
+      "waypoint_order": []
+    }
+  ],
+  "status": "OK"
+}
