@@ -1,13 +1,15 @@
 import fetch from 'node-fetch';
-import { getPubTransRouteParams, PubTransRouteResponse } from './KakaoMapTypes';
+import { BusInfoResponse, getPubTransRouteParams, KakaoSearchResponse, PubTransRouteResponse } from './KakaoMapTypes';
 
 export class KakaoMapCrawler {
+  static CALLBACK = 'jQuery1810971505812370959_1653125770986';
+
   static async getPubTransRoute(params: getPubTransRouteParams) {
     const urlParams = new URLSearchParams({
       inputCoordSystem: 'WCONGNAMUL',
       outputCoordSystem: 'WCONGNAMUL',
       service: 'map.daum.net',
-      callback: 'jQuery1810971505812370959_1653125770986',
+      callback: this.CALLBACK,
       ...params
     });
 
@@ -34,5 +36,32 @@ export class KakaoMapCrawler {
       sid,
       eid
     });
+  }
+
+  static async getBusInfo(busline: string) {
+    const urlParams = new URLSearchParams({
+      output: 'json',
+      callback: this.CALLBACK,
+      busline
+    });
+
+    const response = await fetch(`https://map.kakao.com/bus/info.json?${urlParams.toString()}`);
+    const text = await response.text();
+    const data = JSON.parse(text.substring(text.indexOf('(') + 1, text.lastIndexOf(')'))) as BusInfoResponse;
+    return data;
+  }
+
+  static async search(query: string) {
+    const urlParams = new URLSearchParams({
+      callback: this.CALLBACK,
+      q: query,
+      msFlag: 'A',
+      sort: '0'
+    });
+
+    const response = await fetch(`https://search.map.kakao.com/mapsearch/map.daum?${urlParams.toString()}`);
+    const text = await response.text();
+    const data = JSON.parse(text.substring(text.indexOf('(') + 1, text.lastIndexOf(')'))) as KakaoSearchResponse;
+    return data;
   }
 }
