@@ -36,12 +36,13 @@ export default class Downloader {
     this.busList = params.busList ?? [];
   }
 
-  async loadMap() {
+  async loadMap(time?: number) {
     const results = {
       naver: await NaverMap.pointToPointByURL(this.naverURL, new Date()),
       kakao: await KakaoMap.getPubTransRouteByURL(this.kakaoURL),
       google: await GoogleMap.directions(this.googleData.origin, this.googleData.destination),
-      time: Date.now()
+      time,
+      realTime: Date.now()
     };
     await fs.writeFile(
       path.join(this.savePath, `map_${dateFormat(new Date(), 'yyyymmdd_HHMMss')}.json`),
@@ -49,12 +50,13 @@ export default class Downloader {
     );
   }
 
-  async loadTransitData() {
+  async loadTransitData(time?: number) {
     if (this.busPromise != null) await this.busPromise;
     const results = {
       subway: {
         data: await SeoulSubwayCrawler.loadTrainInfo(),
-        time: Date.now()
+        time,
+        realTime: Date.now()
       }
     };
     await Promise.all(
@@ -62,7 +64,8 @@ export default class Downloader {
         await sleep(i * 1000);
         results[this._busList[i]] = {
           data: await KakaoMap.getBusInfo(this._busIdList[i]),
-          time: Date.now()
+          time: time == null ? undefined : time + i,
+          realTime: Date.now()
         };
       })
     );

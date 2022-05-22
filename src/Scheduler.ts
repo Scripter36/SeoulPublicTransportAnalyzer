@@ -30,7 +30,8 @@ export default class Scheduler {
     transit: 0,
     lastTransit: new Date(),
     map: 0,
-    lastMap: new Date()
+    lastMap: new Date(),
+    time: 0
   };
 
   constructor(
@@ -62,7 +63,8 @@ export default class Scheduler {
       transit: 0,
       lastTransit: new Date(),
       map: 0,
-      lastMap: new Date()
+      lastMap: new Date(),
+      time: 0
     };
   }
 
@@ -79,6 +81,7 @@ export default class Scheduler {
   resume() {
     this.pause();
     this.timer = setInterval(() => {
+      this.statistics.time += this.interval / 1000;
       const now = new Date();
       const nowTime = Scheduler.makeTime(now.getHours(), now.getMinutes(), now.getSeconds());
       if (
@@ -91,14 +94,17 @@ export default class Scheduler {
       this.transitProgress++;
       this.mapProgress++;
       if (this.transitProgress >= this.transitMax) {
-        this.downloaders[0].loadTransitData();
+        this.downloaders[0].loadTransitData(this.statistics.time);
         this.statistics.transit++;
         this.statistics.lastTransit = new Date();
         this.transitProgress = 0;
       }
       if (this.mapProgress >= this.mapMax) {
         this.downloaders.forEach((downloader, i) =>
-          setTimeout(() => downloader.loadMap(), i * this.transitDataLoadInterval)
+          setTimeout(
+            () => downloader.loadMap(this.statistics.time + ((i + 1) * this.transitDataLoadInterval) / 1000),
+            (i + 1) * this.transitDataLoadInterval
+          )
         );
         this.statistics.map++;
         this.statistics.lastMap = new Date();
@@ -129,7 +135,8 @@ export default class Scheduler {
                       }`
                   )
                   .join(', ')
-          }`
+          }\n` +
+          `흐른 시간: ${this.statistics.time}초`
       );
     }, 1000);
   }
