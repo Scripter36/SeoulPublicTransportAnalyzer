@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
 import { BusInfoResponse, getPubTransRouteParams, KakaoSearchResponse, PubTransRouteResponse } from './KakaoMapTypes';
 
-export class KakaoMapCrawler {
+export default class KakaoMap {
   static CALLBACK = 'jQuery1810971505812370959_1653125770986';
 
   static async getPubTransRoute(params: getPubTransRouteParams) {

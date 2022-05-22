@@ -7,7 +7,7 @@ import {
   SubwayMappingDataResponse
 } from './NaverMapTypes';
 
-export class NaverMapCrawler {
+export default class NaverMap {
   static crs = 'epsg:4326';
   static baseCoords = '37.5666103,126.9783881';
   static subwayMappingData: { a: string; b: string }[] = [];
