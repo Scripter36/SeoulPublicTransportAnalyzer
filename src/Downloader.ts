@@ -97,7 +97,9 @@ export default class Downloader {
       this._busIdList = [];
       for (let i = 0; i < busList.length; i++) {
         const response = await KakaoMap.search(busList[i]);
-        this._busIdList.push(response.bus.find((busResult) => busResult.BUS_NAME === busList[i]).DOCID);
+        const busId = response.bus.find((busResult) => busResult.BUS_NAME === busList[i]).DOCID;
+        console.log(`${busList[i]} 버스 id: ${busId}`);
+        this._busIdList.push(busId);
         if (i != busList.length - 1) await sleep(1000);
       }
       this.busPromise = null;

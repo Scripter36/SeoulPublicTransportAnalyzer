@@ -114,16 +114,16 @@ export default class Scheduler {
     this.UITimer = setInterval(() => {
       process.stdout.write(
         '\x1Bc========== SeoulPublicTransportAnalyzer ==========\n' +
-          `대중교통 정보: ${this.statistics.transit}회 수집 ${
+          `대중교통 정보: ${this.statistics.transit}회 수집 (${
             this.statistics.transit > 0
-              ? `(마지막 수집 시간: ${dateFormat(this.statistics.lastTransit, 'yyyy-mm-dd HH:MM:ss')})`
+              ? `마지막 수집 시간: ${dateFormat(this.statistics.lastTransit, 'yyyy-mm-dd HH:MM:ss')}, `
               : ''
-          }\n` +
-          `지도 정보: ${this.statistics.map}회 수집 ${
+          }수집 간격: ${this.transitDataLoadInterval / 1000}초)\n` +
+          `지도 정보: ${this.statistics.map}회 수집 (${
             this.statistics.map > 0
-              ? `(마지막 수집 시간: ${dateFormat(this.statistics.lastMap, 'yyyy-mm-dd HH:MM:ss')})`
+              ? `마지막 수집 시간: ${dateFormat(this.statistics.lastMap, 'yyyy-mm-dd HH:MM:ss')}, `
               : ''
-          }\n` +
+          }수집 간격: ${this.mapLoadInterval / 1000}초)\n` +
           `데이터 수집 시간: ${
             this.enabledTimeRanges.length === 0
               ? '항상'
