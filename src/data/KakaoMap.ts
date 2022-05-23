@@ -7,7 +7,7 @@ import type {
 } from './KakaoMapTypes';
 
 export default class KakaoMap {
-  static CALLBACK = 'jQuery1810971505812370959_1653125770986';
+  static CALLBACK = 'jQuery1810971505812370959_' + Date.now();
 
   static async getPubTransRoute(params: getPubTransRouteParams) {
     const urlParams = new URLSearchParams({
@@ -20,8 +20,13 @@ export default class KakaoMap {
 
     const response = await fetch(`https://map.kakao.com/route/pubtrans.json?${urlParams.toString()}`);
     const text = await response.text();
-    const data = JSON.parse(text.substring(text.indexOf('(') + 1, text.lastIndexOf(')'))) as PubTransRouteResponse;
-    return data;
+    try {
+      const data = JSON.parse(text.substring(text.indexOf('(') + 1, text.lastIndexOf(')'))) as PubTransRouteResponse;
+      return data;
+    } catch (e) {
+      console.log('response: ', response);
+      throw e;
+    }
   }
 
   static async getPubTransRouteByURL(url: string) {
