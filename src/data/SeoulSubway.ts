@@ -22,7 +22,12 @@ export default class SeoulSubwayCrawler {
     }
   }
   static async loadTrainInfo() {
-    const response = await fetch('https://smapp.seoulmetro.co.kr:58443/traininfo/traininfoUserMap.do');
+    const response = await fetch('https://smapp.seoulmetro.co.kr:58443/traininfo/traininfoUserMap.do', {
+      headers: {
+        'User-Agent':
+          'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53'
+      }
+    });
     const text = await response.text();
     const $ = cheerio.load(text);
 

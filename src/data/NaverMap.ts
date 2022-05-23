@@ -17,7 +17,12 @@ export default class NaverMap {
     const entry = this.subwayMappingData.find((data) => data.a === subwayid);
     if (entry != null) return entry.b;
     else {
-      const response = await fetch(`https://map.naver.com/v5/api/subway/mappingdata`);
+      const response = await fetch(`https://map.naver.com/v5/api/subway/mappingdata`, {
+        headers: {
+          'User-Agent':
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53'
+        }
+      });
       const data = (await response.json()) as SubwayMappingDataResponse;
       this.subwayMappingData = data.message.result.dataList.data;
       const newEntry = this.subwayMappingData.find((data) => data.a === subwayid);
@@ -29,7 +34,13 @@ export default class NaverMap {
   static async coordsToAddr(coords: string) {
     // coords는 xxx.xxxxxxx,yy.yyyyyyy 형식의 string (소수점 7자리)
     const response = await fetch(
-      `https://map.naver.com/v5/api/geocode?request=coordsToaddr&version=1.0&sourcecrs=${this.crs}&output=json&orders=addr,roadaddr&coords=${coords}`
+      `https://map.naver.com/v5/api/geocode?request=coordsToaddr&version=1.0&sourcecrs=${this.crs}&output=json&orders=addr,roadaddr&coords=${coords}`,
+      {
+        headers: {
+          'User-Agent':
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53'
+        }
+      }
     );
     const data = (await response.json()) as CoordsToAddrResponse;
     return data;
@@ -44,7 +55,12 @@ export default class NaverMap {
       query
     });
 
-    const response = await fetch(`https://map.naver.com/v5/api/instantSearch?${params.toString()}`);
+    const response = await fetch(`https://map.naver.com/v5/api/instantSearch?${params.toString()}`, {
+      headers: {
+        'User-Agent':
+          'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53'
+      }
+    });
     const data = (await response.json()) as InstantSearchResponse;
     return data;
   }
@@ -60,7 +76,15 @@ export default class NaverMap {
       includeDetailOperation: 'true'
     });
 
-    const response = await fetch('https://map.naver.com/v5/api/transit/directions/point-to-point?' + params.toString());
+    const response = await fetch(
+      'https://map.naver.com/v5/api/transit/directions/point-to-point?' + params.toString(),
+      {
+        headers: {
+          'User-Agent':
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53'
+        }
+      }
+    );
     const data = (await response.json()) as PointToPointResponse;
     return data;
   }

@@ -18,7 +18,12 @@ export default class KakaoMap {
       ...params
     });
 
-    const response = await fetch(`https://map.kakao.com/route/pubtrans.json?${urlParams.toString()}`);
+    const response = await fetch(`https://map.kakao.com/route/pubtrans.json?${urlParams.toString()}`, {
+      headers: {
+        'User-Agent':
+          'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53'
+      }
+    });
     const text = await response.text();
     try {
       const data = JSON.parse(text.substring(text.indexOf('(') + 1, text.lastIndexOf(')'))) as PubTransRouteResponse;
@@ -55,7 +60,12 @@ export default class KakaoMap {
       busline
     });
 
-    const response = await fetch(`https://map.kakao.com/bus/info.json?${urlParams.toString()}`);
+    const response = await fetch(`https://map.kakao.com/bus/info.json?${urlParams.toString()}`, {
+      headers: {
+        'User-Agent':
+          'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53'
+      }
+    });
     const text = await response.text();
     const data = JSON.parse(text.substring(text.indexOf('(') + 1, text.lastIndexOf(')'))) as BusInfoResponse;
     return data;
@@ -70,7 +80,11 @@ export default class KakaoMap {
     });
 
     const response = await fetch(`https://search.map.kakao.com/mapsearch/map.daum?${urlParams.toString()}`, {
-      referrer: 'https://map.kakao.com/'
+      referrer: 'https://map.kakao.com/',
+      headers: {
+        'User-Agent':
+          'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53'
+      }
     });
     const text = await response.text();
     const data = JSON.parse(text.substring(text.indexOf('(') + 1, text.lastIndexOf(')'))) as KakaoSearchResponse;
