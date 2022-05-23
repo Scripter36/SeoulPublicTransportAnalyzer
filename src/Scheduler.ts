@@ -1,5 +1,7 @@
 import dateFormat from 'dateformat';
-import Downloader from './Downloader';
+import Downloader from './Downloader.js';
+import MapDownloader from './MapDownloader.js';
+import TransitDownloader from './TransitDownloader.js';
 
 const getGCD = (a: number, b: number) => {
   while (a % b !== 0) {
@@ -94,18 +96,24 @@ export default class Scheduler {
       this.transitProgress++;
       this.mapProgress++;
       if (this.transitProgress >= this.transitMax) {
-        this.downloaders[0].loadTransitData(this.statistics.time);
+        this.downloaders.forEach((downloader) => {
+          if (downloader instanceof TransitDownloader) {
+            downloader.load(this.statistics.time);
+          }
+        });
         this.statistics.transit++;
         this.statistics.lastTransit = new Date();
         this.transitProgress = 0;
       }
       if (this.mapProgress >= this.mapMax) {
-        this.downloaders.forEach((downloader, i) =>
-          setTimeout(
-            () => downloader.loadMap(this.statistics.time + ((i + 1) * this.transitDataLoadInterval) / 1000),
-            (i + 1) * this.transitDataLoadInterval
-          )
-        );
+        this.downloaders
+          .filter((downloader) => downloader instanceof MapDownloader)
+          .forEach((downloader, i) =>
+            setTimeout(
+              () => downloader.load(this.statistics.time + ((i + 1) * this.transitDataLoadInterval) / 1000),
+              (i + 1) * this.transitDataLoadInterval
+            )
+          );
         this.statistics.map++;
         this.statistics.lastMap = new Date();
         this.mapProgress = 0;
