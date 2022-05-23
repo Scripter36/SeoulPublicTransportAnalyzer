@@ -11,6 +11,10 @@ export enum SubwayState {
 
 const initTime = Date.now();
 
+function sleep(t: number) {
+  return new Promise((resolve) => setTimeout(resolve, t));
+}
+
 export default class SeoulBusCrawler {
   static async getBusPosByRtid(routeId: string) {
     const params = new URLSearchParams({
@@ -34,26 +38,53 @@ export default class SeoulBusCrawler {
   }
 
   static async getBusId(query: string) {
-    const params = new URLSearchParams({
-      searchType: 'A1',
-      searchCode: 'N',
-      searchName: `2,${query}`,
-      imagesType: 'T1',
-      imsiReq: `2,${query}`,
-      mnuNm: '1',
-      strBusNumber: '',
-      gpsX: '',
-      gpsY: ''
-    });
     const response = await fetch('https://bus.go.kr/searchResult6.jsp', {
       method: 'POST',
-      body: params,
+      body: new URLSearchParams({
+        searchType: 'A1',
+        searchCode: 'N',
+        searchName: `2,${query}`,
+        imagesType: 'T1',
+        imsiReq: `2,${query}`,
+        mnuNm: '1',
+        strBusNumber: '',
+        gpsX: '',
+        gpsY: ''
+      }),
       headers: {
         'User-Agent':
           'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53'
       }
     });
     const $ = cheerio.load(await response.text());
+    const searchResult = $('.bus_num_result')
+      .get()
+      .map((el) => $(el).find('p').text().trim());
+    if (searchResult.length > 0 && searchResult[0] !== query) {
+      // 검색이 제대로 안 됨.
+      await sleep(300);
+      const response = await fetch('https://bus.go.kr/searchResult6.jsp', {
+        method: 'POST',
+        body: new URLSearchParams({
+          searchType: '',
+          searchCode: '',
+          searchName: `7,${query},${searchResult.indexOf(query)}`,
+          imagesType: '',
+          imsiReq: `2,${query}`,
+          mnuNm: '1',
+          strBusNumber: '',
+          gpsX: '',
+          gpsY: ''
+        }),
+        headers: {
+          'User-Agent':
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53'
+        }
+      });
+      const $ = cheerio.load(await response.text());
+      const searchParams = new URLSearchParams($('#introflash').attr('src').split('?')[1]);
+      return searchParams.get('strbusid');
+    }
     const searchParams = new URLSearchParams($('#introflash').attr('src').split('?')[1]);
     return searchParams.get('strbusid');
   }
