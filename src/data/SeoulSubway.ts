@@ -36,6 +36,7 @@ export default class SeoulSubwayCrawler {
             .map((element) => element.attributes.find((attr) => attr.name === 'title').value)
             .map((text) => {
               const data = text.split(/\s+/g);
+              if (data.length !== 4) return null;
               return {
                 line: line,
                 id: data[0].substring(0, data[0].length - 2),
@@ -43,7 +44,8 @@ export default class SeoulSubwayCrawler {
                 state: this.strToState(data[2]),
                 destination: data[3].substring(0, data[3].length - 1)
               };
-            });
+            })
+            .filter((item) => item != null);
           // trains 포맷: x열차 y (출발|도착|접근|이동) z행. y는 출발 / 도착은 해당 역, 이동 / 접근은 다음 역이 뜬다.
         })
         .flat();
