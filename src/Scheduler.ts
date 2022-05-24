@@ -4,31 +4,16 @@ import MapDownloader from './MapDownloader.js';
 import TransitDownloader from './TransitDownloader.js';
 import { sleep } from './Utils.js';
 
-const getGCD = (a: number, b: number) => {
-  while (a % b !== 0) {
-    const c = a % b;
-    a = b;
-    b = c;
-  }
-  return b;
-};
-
 export default class Scheduler {
   mapLoadInterval: number; // 예상 도착 시간 포함 지도 데이터 불러오는 간격. 밀리세컨드
-  transitDataLoadInterval: number; // 실시간 대중교통 정보 불러오는 간격. 밀리세컨드
+  transitLoadInterval: number; // 실시간 대중교통 정보 불러오는 간격. 밀리세컨드
   downloaders: Downloader[];
 
   timer: NodeJS.Timer | null;
   UITimer: NodeJS.Timer | null;
 
-  progress = 0;
-  mapProgress = 0;
-  mapMax = 0;
-  transitProgress = 0;
-  transitMax = 0;
-  interval = 0;
-  transitLoading = false;
-  mapLoading = false;
+  lastMapExecuteTime = 0;
+  lastTransitExecuteTime = 0;
   enabledTimeRanges: { begin?: number; end?: number }[];
 
   statistics = {
@@ -36,20 +21,20 @@ export default class Scheduler {
     lastTransit: new Date(),
     map: 0,
     lastMap: new Date(),
-    time: 0,
+    begin: new Date(),
     errors: []
   };
 
   constructor(
     params: Partial<{
       mapLoadInterval: number;
-      transitDataLoadInterval: number;
+      transitLoadInterval: number;
       downloaders: Downloader[];
       enabledTimeRanges: { begin?: number; end?: number }[];
     }>
   ) {
     this.mapLoadInterval = params.mapLoadInterval;
-    this.transitDataLoadInterval = params.transitDataLoadInterval;
+    this.transitLoadInterval = params.transitLoadInterval;
     this.downloaders = params.downloaders ?? [];
     this.enabledTimeRanges = params.enabledTimeRanges;
   }
@@ -59,20 +44,14 @@ export default class Scheduler {
   }
 
   init() {
-    this.interval = getGCD(this.mapLoadInterval, this.transitDataLoadInterval);
-    this.mapMax = this.mapLoadInterval / this.interval;
-    this.transitMax = this.transitDataLoadInterval / this.interval;
-    this.progress = 0;
-    this.mapProgress = 0;
-    this.transitProgress = 0;
-    this.transitLoading = false;
-    this.mapLoading = false;
+    this.lastMapExecuteTime = Math.floor(Date.now() / this.mapLoadInterval) * this.mapLoadInterval;
+    this.lastTransitExecuteTime = Math.floor(Date.now() / this.transitLoadInterval) * this.transitLoadInterval;
     this.statistics = {
       transit: 0,
       lastTransit: new Date(),
       map: 0,
       lastMap: new Date(),
-      time: 0,
+      begin: new Date(),
       errors: []
     };
   }
@@ -90,7 +69,6 @@ export default class Scheduler {
   resume() {
     this.pause();
     this.timer = setInterval(() => {
-      this.statistics.time += this.interval / 1000;
       const now = new Date();
       const nowTime = Scheduler.makeTime(now.getHours(), now.getMinutes(), now.getSeconds());
       if (
@@ -100,48 +78,46 @@ export default class Scheduler {
         })
       )
         return;
-      this.transitProgress++;
-      this.mapProgress++;
-      if (!this.transitLoading && this.transitProgress >= this.transitMax) {
-        this.transitLoading = true;
-        Promise.all(
-          this.downloaders
-            .filter((downloader) => downloader instanceof TransitDownloader)
-            .map(async (downloader) => {
-              await downloader.load(this.statistics.time);
-            })
-        )
-          .then(() => {
-            this.statistics.transit++;
-            this.statistics.lastTransit = new Date();
-            this.transitProgress = 0;
-          })
-          .catch((e) => {
-            this.statistics.errors.push(e);
-          })
-          .finally(() => (this.transitLoading = false));
-      }
-      if (!this.mapLoading && this.mapProgress >= this.mapMax) {
-        this.mapLoading = true;
+
+      const time = now.getTime();
+      if (time - this.lastMapExecuteTime >= this.mapLoadInterval) {
+        this.lastMapExecuteTime = Math.floor(time / this.mapLoadInterval) * this.mapLoadInterval;
         Promise.all(
           this.downloaders
             .filter((downloader) => downloader instanceof MapDownloader)
             .map(async (downloader, i) => {
-              await sleep((i + 1) * this.transitDataLoadInterval);
-              await downloader.load(this.statistics.time + ((i + 1) * this.transitDataLoadInterval) / 1000);
+              await sleep((i + 1) * this.transitLoadInterval);
+              await downloader.load(this.lastMapExecuteTime + (i + 1) * this.transitLoadInterval);
             })
         )
           .then(() => {
             this.statistics.map++;
-            this.statistics.lastMap = new Date();
-            this.mapProgress = 0;
+            this.statistics.lastMap = new Date(this.lastMapExecuteTime);
           })
           .catch((e) => {
             this.statistics.errors.push(e);
-          })
-          .finally(() => (this.mapLoading = false));
+            this.lastMapExecuteTime -= this.mapLoadInterval;
+          });
       }
-    }, this.interval);
+      if (time - this.lastTransitExecuteTime >= this.transitLoadInterval) {
+        this.lastTransitExecuteTime = Math.floor(time / this.transitLoadInterval) * this.transitLoadInterval;
+        Promise.all(
+          this.downloaders
+            .filter((downloader) => downloader instanceof TransitDownloader)
+            .map(async (downloader) => {
+              await downloader.load(this.lastTransitExecuteTime);
+            })
+        )
+          .then(() => {
+            this.statistics.transit++;
+            this.statistics.lastTransit = new Date(this.lastTransitExecuteTime);
+          })
+          .catch((e) => {
+            this.statistics.errors.push(e);
+            this.lastTransitExecuteTime -= this.transitLoadInterval;
+          });
+      }
+    }, 10);
     this.UITimer = setInterval(() => {
       process.stdout.write(
         '\x1Bc========== SeoulPublicTransportAnalyzer ==========\n' +
@@ -149,7 +125,7 @@ export default class Scheduler {
             this.statistics.transit > 0
               ? `마지막 수집 시간: ${dateFormat(this.statistics.lastTransit, 'yyyy-mm-dd HH:MM:ss')}, `
               : ''
-          }수집 간격: ${this.transitDataLoadInterval / 1000}초)\n` +
+          }수집 간격: ${this.transitLoadInterval / 1000}초)\n` +
           `지도 정보: ${this.statistics.map}회 수집 (${
             this.statistics.map > 0
               ? `마지막 수집 시간: ${dateFormat(this.statistics.lastMap, 'yyyy-mm-dd HH:MM:ss')}, `
@@ -167,13 +143,13 @@ export default class Scheduler {
                   )
                   .join(', ')
           }\n` +
-          `흐른 시간: ${this.statistics.time}초\n` +
+          `흐른 시간: ${dateFormat(new Date(Date.now() - this.statistics.begin.getTime()), 'UTC:HH:MM:ss')}\n` +
           `오류: ${this.statistics.errors.length}회 발생\n` +
           (this.statistics.errors.length > 0
             ? `마지막 오류: ${this.statistics.errors[this.statistics.errors.length - 1]}`
             : '')
       );
-      if (this.statistics.errors.length > 10) {
+      if (this.statistics.errors.length > 25) {
         console.log('너무 많은 오류가 발생하여 프로그램을 중단합니다. 에러:');
         this.statistics.errors.forEach((e) => console.error(e));
         process.exit(1);
