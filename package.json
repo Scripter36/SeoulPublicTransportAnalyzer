@@ -20,7 +20,8 @@
     "dateformat": "^5.0.3",
     "dotenv": "^16.0.1",
     "node-fetch": "git+https://github.com/node-fetch/node-fetch.git",
-    "proj4": "^2.8.0"
+    "proj4": "^2.8.0",
+    "timeout-signal": "^1.1.0"
   },
   "scripts": {
     "start": "node --loader ts-node/esm -r ts-node/register -r tsconfig-paths/register ./index.ts"

@@ -1,6 +1,7 @@
 import fetch from 'node-fetch';
 import * as cheerio from 'cheerio';
 import { Agent } from 'https';
+import timeoutSignal from 'timeout-signal';
 
 export enum SubwayState {
   DEPARTURE,
@@ -35,7 +36,8 @@ export default class SeoulSubwayCrawler {
         'User-Agent':
           'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53'
       },
-      agent: () => httpsAgent
+      agent: () => httpsAgent,
+      signal: timeoutSignal(1500)
     });
     const text = await response.text();
     const $ = cheerio.load(text);
