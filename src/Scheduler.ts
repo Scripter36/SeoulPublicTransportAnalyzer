@@ -76,8 +76,11 @@ export default class Scheduler {
         !this.enabledTimeRanges.some((range) => {
           return (range.begin == null || nowTime >= range.begin) && (range.end == null || nowTime <= range.end);
         })
-      )
+      ) {
+        this.lastMapExecuteTime = Math.floor(Date.now() / this.mapLoadInterval) * this.mapLoadInterval;
+        this.lastTransitExecuteTime = Math.floor(Date.now() / this.transitLoadInterval) * this.transitLoadInterval;
         return;
+      }
 
       const time = now.getTime();
       if (time - this.lastMapExecuteTime >= this.mapLoadInterval) {
