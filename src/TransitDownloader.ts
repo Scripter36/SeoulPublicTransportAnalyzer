@@ -42,7 +42,7 @@ export default class TransitDownloader implements Downloader {
       })
     );
     await fs.writeFile(
-      path.join(this.savePath, `transit_${dateFormat(new Date(), 'yyyymmdd_HHMMss')}.json`),
+      path.join(this.savePath, `transit_${dateFormat(new Date(time), 'yyyymmdd_HHMMss')}.json`),
       JSON.stringify(results)
     );
   }

@@ -41,7 +41,7 @@ export default class MapDownloader implements Downloader {
       await fs.mkdir(this.savePath);
     }
     await fs.writeFile(
-      path.join(this.savePath, `map_${dateFormat(new Date(), 'yyyymmdd_HHMMss')}.json`),
+      path.join(this.savePath, `map_${dateFormat(new Date(time), 'yyyymmdd_HHMMss')}.json`),
       JSON.stringify(results)
     );
   }
