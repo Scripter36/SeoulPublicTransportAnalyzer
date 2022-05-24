@@ -73,7 +73,7 @@ const downloaders = [
 
 const scheduler = new Scheduler({
   mapLoadInterval: 1000 * 60 * 5, // 5분
-  transitDataLoadInterval: 1000 * 10, // 10초
+  transitLoadInterval: 1000 * 10, // 10초
   downloaders,
   enabledTimeRanges: [
     {
