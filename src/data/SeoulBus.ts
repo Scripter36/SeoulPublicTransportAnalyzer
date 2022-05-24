@@ -1,6 +1,8 @@
 import fetch from 'node-fetch';
 import * as cheerio from 'cheerio';
 import { getBusPosByRtidResponse } from './SeoulBusTypes';
+import { sleep } from '../Utils.js';
+import { Agent } from 'https';
 
 export enum SubwayState {
   DEPARTURE,
@@ -11,9 +13,7 @@ export enum SubwayState {
 
 const initTime = Date.now();
 
-function sleep(t: number) {
-  return new Promise((resolve) => setTimeout(resolve, t));
-}
+const httpsAgent = new Agent({ keepAlive: true });
 
 export default class SeoulBusCrawler {
   static async getBusPosByRtid(routeId: string) {
@@ -29,7 +29,8 @@ export default class SeoulBusCrawler {
         headers: {
           'User-Agent':
             'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53'
-        }
+        },
+        agent: () => httpsAgent
       }
     );
     const text = await response.text();
@@ -54,7 +55,8 @@ export default class SeoulBusCrawler {
       headers: {
         'User-Agent':
           'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53'
-      }
+      },
+      agent: () => httpsAgent
     });
     const $ = cheerio.load(await response.text());
     const searchResult = $('.bus_num_result')

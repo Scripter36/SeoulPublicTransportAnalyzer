@@ -4,10 +4,7 @@ import dateFormat from 'dateformat';
 import SeoulSubwayCrawler from './data/SeoulSubway.js';
 import SeoulBusCrawler from './data/SeoulBus.js';
 import Downloader from './Downloader.js';
-
-function sleep(t: number) {
-  return new Promise((resolve) => setTimeout(resolve, t));
-}
+import { sleep } from './Utils.js';
 
 export default class TransitDownloader implements Downloader {
   private _busList: string[];

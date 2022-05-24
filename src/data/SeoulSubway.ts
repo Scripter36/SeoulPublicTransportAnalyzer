@@ -1,5 +1,6 @@
 import fetch from 'node-fetch';
 import * as cheerio from 'cheerio';
+import { Agent } from 'https';
 
 export enum SubwayState {
   DEPARTURE,
@@ -7,6 +8,8 @@ export enum SubwayState {
   MOVING,
   APPROACH
 }
+
+const httpsAgent = new Agent({ keepAlive: true });
 
 export default class SeoulSubwayCrawler {
   static strToState(str: string) {
@@ -23,10 +26,16 @@ export default class SeoulSubwayCrawler {
   }
   static async loadTrainInfo() {
     const response = await fetch('https://smapp.seoulmetro.co.kr:58443/traininfo/traininfoUserMap.do', {
+      method: 'POST',
+      body: new URLSearchParams({
+        line: '0',
+        isCb: 'N'
+      }),
       headers: {
         'User-Agent':
           'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53'
-      }
+      },
+      agent: () => httpsAgent
     });
     const text = await response.text();
     const $ = cheerio.load(text);

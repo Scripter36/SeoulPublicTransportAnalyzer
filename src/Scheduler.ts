@@ -2,6 +2,7 @@ import dateFormat from 'dateformat';
 import Downloader from './Downloader.js';
 import MapDownloader from './MapDownloader.js';
 import TransitDownloader from './TransitDownloader.js';
+import { sleep } from './Utils.js';
 
 const getGCD = (a: number, b: number) => {
   while (a % b !== 0) {
@@ -26,6 +27,8 @@ export default class Scheduler {
   transitProgress = 0;
   transitMax = 0;
   interval = 0;
+  transitLoading = false;
+  mapLoading = false;
   enabledTimeRanges: { begin?: number; end?: number }[];
 
   statistics = {
@@ -33,7 +36,8 @@ export default class Scheduler {
     lastTransit: new Date(),
     map: 0,
     lastMap: new Date(),
-    time: 0
+    time: 0,
+    errors: []
   };
 
   constructor(
@@ -61,12 +65,15 @@ export default class Scheduler {
     this.progress = 0;
     this.mapProgress = 0;
     this.transitProgress = 0;
+    this.transitLoading = false;
+    this.mapLoading = false;
     this.statistics = {
       transit: 0,
       lastTransit: new Date(),
       map: 0,
       lastMap: new Date(),
-      time: 0
+      time: 0,
+      errors: []
     };
   }
 
@@ -95,28 +102,44 @@ export default class Scheduler {
         return;
       this.transitProgress++;
       this.mapProgress++;
-      if (this.transitProgress >= this.transitMax) {
-        this.downloaders.forEach((downloader) => {
-          if (downloader instanceof TransitDownloader) {
-            downloader.load(this.statistics.time);
-          }
-        });
-        this.statistics.transit++;
-        this.statistics.lastTransit = new Date();
-        this.transitProgress = 0;
+      if (!this.transitLoading && this.transitProgress >= this.transitMax) {
+        this.transitLoading = true;
+        Promise.all(
+          this.downloaders
+            .filter((downloader) => downloader instanceof TransitDownloader)
+            .map(async (downloader) => {
+              await downloader.load(this.statistics.time);
+            })
+        )
+          .then(() => {
+            this.statistics.transit++;
+            this.statistics.lastTransit = new Date();
+            this.transitProgress = 0;
+          })
+          .catch((e) => {
+            this.statistics.errors.push(e);
+          })
+          .finally(() => (this.transitLoading = false));
       }
-      if (this.mapProgress >= this.mapMax) {
-        this.downloaders
-          .filter((downloader) => downloader instanceof MapDownloader)
-          .forEach((downloader, i) =>
-            setTimeout(
-              () => downloader.load(this.statistics.time + ((i + 1) * this.transitDataLoadInterval) / 1000),
-              (i + 1) * this.transitDataLoadInterval
-            )
-          );
-        this.statistics.map++;
-        this.statistics.lastMap = new Date();
-        this.mapProgress = 0;
+      if (!this.mapLoading && this.mapProgress >= this.mapMax) {
+        this.mapLoading = true;
+        Promise.all(
+          this.downloaders
+            .filter((downloader) => downloader instanceof MapDownloader)
+            .map(async (downloader, i) => {
+              await sleep((i + 1) * this.transitDataLoadInterval);
+              await downloader.load(this.statistics.time + ((i + 1) * this.transitDataLoadInterval) / 1000);
+            })
+        )
+          .then(() => {
+            this.statistics.map++;
+            this.statistics.lastMap = new Date();
+            this.mapProgress = 0;
+          })
+          .catch((e) => {
+            this.statistics.errors.push(e);
+          })
+          .finally(() => (this.mapLoading = false));
       }
     }, this.interval);
     this.UITimer = setInterval(() => {
@@ -144,8 +167,17 @@ export default class Scheduler {
                   )
                   .join(', ')
           }\n` +
-          `흐른 시간: ${this.statistics.time}초`
+          `흐른 시간: ${this.statistics.time}초\n` +
+          `오류: ${this.statistics.errors.length}회 발생\n` +
+          (this.statistics.errors.length > 0
+            ? `마지막 오류: ${this.statistics.errors[this.statistics.errors.length - 1]}`
+            : '')
       );
+      if (this.statistics.errors.length > 10) {
+        console.log('너무 많은 오류가 발생하여 프로그램을 중단합니다. 에러:');
+        this.statistics.errors.forEach((e) => console.error(e));
+        process.exit(1);
+      }
     }, 1000);
   }
 
