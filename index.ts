@@ -12,12 +12,13 @@ const downloaders = [
   new MapDownloader({
     // 마들역 7호선 -> 숭실대입구역 7호선
     naverURL:
-      'https://map.naver.com/v5/directions/14147112.171709511,4522499.12257681,%EC%83%81%EB%B4%89%EC%97%AD%207%ED%98%B8%EC%84%A0,720,SUBWAY_STATION/14145489.745790947,4514767.868262075,%EA%B1%B4%EB%8C%80%EC%9E%85%EA%B5%AC%EC%97%AD%207%ED%98%B8%EC%84%A0,727,SUBWAY_STATION/-/transit?c=14145463.6747662,4514705.3378391,17,0,0,0,dh',
+      'https://map.naver.com/v5/directions/14143991.229597587,4532262.860091645,%EB%A7%88%EB%93%A4%EC%97%AD%207%ED%98%B8%EC%84%A0,712,SUBWAY_STATION/14132453.56550211,4508450.588654172,%EC%88%AD%EC%8B%A4%EB%8C%80%EC%9E%85%EA%B5%AC%EC%97%AD%207%ED%98%B8%EC%84%A0,738,SUBWAY_STATION/-/transit?c=14132493.9633453,4519483.8706851,11,0,0,0,dh',
     kakaoURL:
       'https://map.kakao.com/?map_type=TYPE_MAP&target=traffic&rt=512730%2C1157103%2C489747%2C1110241&rt1=%EB%A7%88%EB%93%A4%EC%97%AD+7%ED%98%B8%EC%84%A0&rt2=%EC%88%AD%EC%8B%A4%EB%8C%80%EC%9E%85%EA%B5%AC%EC%97%AD+7%ED%98%B8%EC%84%A0&rtIds=SES2714%2CSES2740&rtTypes=SUBWAYSTATION%2CSUBWAYSTATION&transitOption=3',
     googleData: {
-      origin: { lat: 37.665375, lng: 127.057614 },
-      destination: { lat: 37.496374, lng: 126.953504 }
+      origin: { lat: 37.665383, lng: 127.057634 },
+      destination: { lat: 37.495861, lng: 126.953991 }
+      // https://www.google.com/maps/dir/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C+%EB%A7%88%EB%93%A4/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C+%EB%8F%99%EC%9E%91%EA%B5%AC+%EC%83%81%EB%8F%84%EB%A1%9C+%EC%A7%80%ED%95%98+378+%EC%88%AD%EC%8B%A4%EB%8C%80%EC%9E%85%EA%B5%AC/am=t/data=!4m18!4m17!1m5!1m1!1s0x357cb93cc02ed8ed:0xf5acdaa422758b93!2m2!1d127.057634!2d37.665383!1m5!1m1!1s0x357c9f7e056dc85b:0x92c41cbc38d70dbd!2m2!1d126.953991!2d37.495861!2m3!6e0!7e2!8j1653515820!3e3
     },
     savePath: './data/1/'
   }),
@@ -28,8 +29,9 @@ const downloaders = [
     kakaoURL:
       'https://map.kakao.com/?map_type=TYPE_MAP&target=traffic&rt=513997%2C1154645%2C484466%2C1106901&rt1=%EB%85%B8%EC%9B%90%EC%97%AD+4%ED%98%B8%EC%84%A0&rt2=%EC%8B%A0%EB%A6%BC%EC%97%AD+2%ED%98%B8%EC%84%A0&rtIds=SES0411%2CSES0230&rtTypes=SUBWAYSTATION%2CSUBWAYSTATION&transitOption=3',
     googleData: {
-      origin: { lat: 37.654527, lng: 127.060551 },
-      destination: { lat: 37.484269, lng: 126.929676 }
+      origin: { lat: 37.6563645, lng: 127.0633647 },
+      destination: { lat: 37.484231, lng: 126.929699 }
+      // https://www.google.com/maps/dir/%EB%85%B8%EC%9B%90/%EC%8B%A0%EB%A6%BC/data=!4m18!4m17!1m5!1m1!1s0x357cb9403a11c56d:0xec1db9d90ace9274!2m2!1d127.0633647!2d37.6563645!1m5!1m1!1s0x357c9fbf05820b73:0xc5ea4ec7a63a4cd0!2m2!1d126.929699!2d37.484231!2m3!6e0!7e2!8j1653514140!3e3
     },
     savePath: './data/2/'
   }),
@@ -41,8 +43,9 @@ const downloaders = [
       'https://map.kakao.com/?map_type=TYPE_MAP&target=traffic&rt=489588%2C1110379%2C490430%2C1100319&rt1=%EC%88%AD%EC%8B%A4%EB%8C%80%EC%9E%85%EA%B5%AC%EC%97%AD&rt2=%EA%B4%80%EC%95%85%EC%82%AC%EC%82%BC%EA%B1%B0%EB%A6%AC&rtIds=BS30355%2CBS22128&rtTypes=BUSSTOP%2CBUSSTOP&transitOption=3',
     googleData: {
       origin: { lat: 37.496226, lng: 126.953415 },
-      destination: { lat: 37.461058, lng: 126.956516 }
+      destination: { lat: 37.46103, lng: 126.956392 }
     },
+    // https://www.google.com/maps/dir/%EC%88%AD%EC%8B%A4%EB%8C%80%EC%9E%85%EA%B5%AC%EC%97%AD/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C+%EA%B4%80%EC%95%85%EC%82%AC%EC%82%BC%EA%B1%B0%EB%A6%AC/data=!4m14!4m13!1m5!1m1!1s0x357c9f7e1068cf73:0x8cf1a2aeba7c6ee!2m2!1d126.953415!2d37.496226!1m5!1m1!1s0x357ca00256661d17:0xd9179ff332f3642c!2m2!1d126.956392!2d37.46103!3e3
     savePath: './data/3/'
   }),
   new MapDownloader({
