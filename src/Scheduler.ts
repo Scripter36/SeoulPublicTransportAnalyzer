@@ -120,7 +120,7 @@ export default class Scheduler {
             this.lastTransitExecuteTime -= this.transitLoadInterval;
           });
       }
-    }, 10);
+    }, 500);
     this.UITimer = setInterval(() => {
       process.stdout.write(
         '\x1Bc========== SeoulPublicTransportAnalyzer ==========\n' +
@@ -152,7 +152,7 @@ export default class Scheduler {
             ? `마지막 오류: ${this.statistics.errors[this.statistics.errors.length - 1]}`
             : '')
       );
-      if (this.statistics.errors.length > 25) {
+      if (this.statistics.errors.length > 200) {
         console.log('너무 많은 오류가 발생하여 프로그램을 중단합니다. 에러:');
         this.statistics.errors.forEach((e) => console.error(e));
         process.exit(1);
