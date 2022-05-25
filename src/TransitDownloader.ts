@@ -1,10 +1,15 @@
 import * as fs from 'fs/promises';
 import * as path from 'path';
 import dateFormat from 'dateformat';
-import SeoulSubwayCrawler from './data/SeoulSubway.js';
+import SeoulSubwayCrawler, { TrainInfo } from './data/SeoulSubway.js';
 import SeoulBusCrawler from './data/SeoulBus.js';
 import Downloader from './Downloader.js';
 import { sleep } from './Utils.js';
+import { getBusPosByRtidResponse } from './data/SeoulBusTypes.js';
+
+export type TransitData = {
+  [busId: Exclude<string, 'subway'>]: { data: getBusPosByRtidResponse; time: number; realTime: number };
+} & { subway: { data: TrainInfo[]; time: number; realTime: number } };
 
 export default class TransitDownloader implements Downloader {
   private _busList: string[];

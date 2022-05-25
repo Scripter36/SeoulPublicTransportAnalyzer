@@ -329,11 +329,39 @@ export interface Path {
   vehicleTypes: string[];
 }
 
+export interface StaticPath {
+  idx: number;
+  mode: string;
+  type: string;
+  optimizationMethod: string;
+  labels: string[];
+  departureTime: Date;
+  arrivalTime: Date;
+  duration: number;
+  intercityDuration: number;
+  walkingDuration: number;
+  waitingDuration: number;
+  distance: number;
+  shutdown: boolean;
+  fare: number;
+  fares: Fare[];
+  legs: {
+    steps: Step[];
+  }[];
+  transferCount: number;
+  directionsType: string;
+  pathLabels: {
+    labelCode: string;
+    labelText: string;
+  }[];
+  vehicleTypes: string[];
+}
+
 export interface PointToPointResponse {
   status: string;
   context: Context;
   paths: Path[];
-  staticPaths: unknown[];
+  staticPaths: StaticPath[];
 }
 
 export interface Place {

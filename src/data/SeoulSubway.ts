@@ -12,6 +12,14 @@ export enum SubwayState {
 
 const httpsAgent = new Agent({ keepAlive: true });
 
+export interface TrainInfo {
+  line: number;
+  id: string;
+  location: string;
+  state: SubwayState;
+  destination: string;
+}
+
 export default class SeoulSubwayCrawler {
   static strToState(str: string) {
     switch (str) {
@@ -25,7 +33,19 @@ export default class SeoulSubwayCrawler {
         return SubwayState.APPROACH;
     }
   }
-  static async loadTrainInfo() {
+  static stateToStr(state: SubwayState) {
+    switch (state) {
+      case SubwayState.DEPARTURE:
+        return '출발';
+      case SubwayState.ARRIVAL:
+        return '도착';
+      case SubwayState.MOVING:
+        return '이동';
+      case SubwayState.APPROACH:
+        return '접근';
+    }
+  }
+  static async loadTrainInfo(): Promise<TrainInfo[]> {
     const response = await fetch('https://smapp.seoulmetro.co.kr:58443/traininfo/traininfoUserMap.do', {
       method: 'POST',
       body: new URLSearchParams({
@@ -37,7 +57,7 @@ export default class SeoulSubwayCrawler {
           'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53'
       },
       agent: () => httpsAgent,
-      signal: timeoutSignal(1500)
+      signal: timeoutSignal(5000)
     });
     const text = await response.text();
     const $ = cheerio.load(text);

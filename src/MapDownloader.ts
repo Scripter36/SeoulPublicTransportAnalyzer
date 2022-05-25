@@ -1,4 +1,4 @@
-import { LatLng } from '@googlemaps/google-maps-services-js';
+import { DirectionsResponseData, LatLng } from '@googlemaps/google-maps-services-js';
 import NaverMap from './data/NaverMap.js';
 import * as fs from 'fs/promises';
 import * as path from 'path';
@@ -6,6 +6,16 @@ import dateFormat from 'dateformat';
 import KakaoMap from './data/KakaoMap.js';
 import GoogleMap from './data/GoogleMap.js';
 import Downloader from './Downloader.js';
+import { PointToPointResponse } from './data/NaverMapTypes.js';
+import { PubTransRouteResponse } from './data/KakaoMapTypes.js';
+
+export interface MapData {
+  naver: PointToPointResponse;
+  kakao: PubTransRouteResponse;
+  google: DirectionsResponseData;
+  time: number;
+  realTime: number;
+}
 
 export default class MapDownloader implements Downloader {
   private _naverURL: string;

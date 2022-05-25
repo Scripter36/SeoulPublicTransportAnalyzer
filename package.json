@@ -24,6 +24,7 @@
     "timeout-signal": "^1.1.0"
   },
   "scripts": {
+    "analyze": "node --loader ts-node/esm -r ts-node/register -r tsconfig-paths/register ./analyze.ts",
     "start": "node --loader ts-node/esm -r ts-node/register -r tsconfig-paths/register ./index.ts"
   }
 }
