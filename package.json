@@ -21,7 +21,8 @@
     "dotenv": "^16.0.1",
     "node-fetch": "git+https://github.com/node-fetch/node-fetch.git",
     "proj4": "^2.8.0",
-    "timeout-signal": "^1.1.0"
+    "timeout-signal": "^1.1.0",
+    "xlsx": "^0.18.5"
   },
   "scripts": {
     "analyze": "node --loader ts-node/esm -r ts-node/register -r tsconfig-paths/register ./analyze.ts",

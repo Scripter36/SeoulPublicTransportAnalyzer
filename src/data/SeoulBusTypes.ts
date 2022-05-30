@@ -1,4 +1,21 @@
 export interface ComMsgHeader {
+  requestMsgID?: unknown;
+  serviceKey?: unknown;
+  requestTime?: unknown;
+  callBackURI?: unknown;
+}
+
+export interface MsgHeader {
+  headerMsg: string;
+}
+
+export interface InBusPosByRtid {
+  comMsgHeader: ComMsgHeader;
+  msgHeader: MsgHeader;
+  busRouteId: string;
+}
+
+export interface ComMsgHeader2 {
   errMsg?: unknown;
   requestMsgID?: unknown;
   responseTime?: unknown;
@@ -7,64 +24,53 @@ export interface ComMsgHeader {
   returnCode?: unknown;
 }
 
-export interface MsgHeader {
+export interface MsgHeader2 {
   headerMsg: string;
   headerCd: string;
   itemCount: number;
 }
 
 export interface ItemList {
-  busRouteId: string;
-  busRouteNm: string;
-  seq: string;
-  section: string;
-  station: string;
-  arsId: string;
-  stationNm: string;
-  gpsX: string;
-  gpsY: string;
+  sectOrd: string;
+  fullSectDist: string;
+  sectDist: string;
+  rtDist: string;
+  stopFlag: string;
+  sectionId: string;
+  dataTm: string;
+  tmX?: unknown;
+  tmY?: unknown;
   posX: string;
   posY: string;
-  fullSectDist: string;
-  direction: string;
-  stationNo: string;
-  routeType: string;
-  beginTm: string;
-  lastTm: string;
+  gpsX: string;
+  gpsY: string;
+  vehId: string;
+  plainNo: string;
+  busType: string;
+  lastStTm: string;
+  nextStTm: string;
+  lastStnId: string;
+  lastStnOrd: string;
+  lastStnOrd2: string;
+  lastStnOrd3: string;
   trnstnid: string;
-  sectSpd: string;
-  transYn: string;
-  detourAt: string;
+  isrunyn: string;
+  islastyn: string;
+  isFullFlag: string;
+  congetion: string;
 }
 
 export interface MsgBody {
   itemList: ItemList[];
 }
 
-export interface OutStationByRoute {
-  comMsgHeader: ComMsgHeader;
-  msgHeader: MsgHeader;
+export interface OutBusPosByRtid {
+  comMsgHeader: ComMsgHeader2;
+  msgHeader: MsgHeader2;
   msgBody: MsgBody;
 }
 
-export interface ComMsgHeader2 {
-  requestMsgID?: unknown;
-  serviceKey?: unknown;
-  requestTime?: unknown;
-  callBackURI?: unknown;
-}
-
-export interface MsgHeader2 {
-  headerMsg: string;
-}
-
-export interface InStationByRoute {
-  comMsgHeader: ComMsgHeader2;
-  msgHeader: MsgHeader2;
-  busRouteId: string;
-}
-
 export interface getBusPosByRtidResponse {
-  outStationByRoute: OutStationByRoute;
-  inStationByRoute: InStationByRoute;
+  inBusPosByRtid: InBusPosByRtid;
+  outBusPosByRtid: OutBusPosByRtid;
 }
